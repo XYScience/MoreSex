@@ -1,0 +1,24 @@
+#MyEclipse Hibernate Properties
+#Thu Jan 22 11:39:21 CST 2015
+sessionFactoryName=com.moresex.entity.HibernateSessionFactory
+genBasicCompId=true
+profile=
+daoSFId=
+version=4.1
+jndiPath=
+detectM2M=true
+reStrategyClass=
+detectO2O=true
+springDaoFile=
+useJavaTypes=true
+keyGenerator=identity
+libInstallFolder=/WebRoot/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=true
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=
+configFile=/MoreSex/src/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=true

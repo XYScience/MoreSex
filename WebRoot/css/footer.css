@@ -1,0 +1,48 @@
+html,body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	-
+}
+
+#main {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+#footer {
+	position: relative;
+	margin-top: -50px; /*等于footer的高度*/
+	height: 50px;
+	clear: both;
+	background: #000;
+	text-align: center;
+	color: fff;
+}
+
+.green_leaf_l {
+	margin-bottom: 50px;
+	position: absolute;
+	z-index: 2;
+	bottom: -50px;
+}
+
+.list-inline {
+	text-align: center;
+	margin: auto;
+	list-style: outside none none;
+}
+
+.list-inline li {
+	margin-top: 10px;
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.list-inline li a {
+	font-size: 17px;
+	text-decoration: none;
+	color: #fff;
+}

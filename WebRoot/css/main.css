@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,p,ul,li,input,button,textarea {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: "微软雅黑";
+	line-height: 24px;
+	text-align: left;
+}
+
+h1,h2,h3,h4,a {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+ol,ul,li {
+	list-style: none;
+}
+
+img {
+	border: 0;
+	vertical-align: middle;
+}
+
+a {
+	color: #3F3F3F;
+}
+
+a:hover {
+	color: #2AA53B;
+}
+
+/* 顶部导航  */
+.header {
+	height: 85px;
+	background: url(../images/top_bg.png) center top repeat;
+	margin-bottom: 10px;
+}
+
+.con {
+	width: 900px;
+	margin: auto;
+}
+
+.header h1 {
+	width: 242px;
+	height: 65px;
+	margin-top: 14px;
+	margin-right: 30px;
+	display: inline-block;
+	float: left;
+}
+
+.nav {
+	width: 400px;
+	height: 80px;
+	display: inline-block;
+	position: relative;
+	float: left;
+	color: #555;
+}
+
+.Nav_list {
+	margin-top: 14px;
+	height: 66px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	float: left;
+	line-height: 60px;
+	position: relative;
+}
+
+.Nav_list a:hover {
+	color: #3cac4c;
+	background: url("../images/icon_right_more_press.png") no-repeat scroll
+		right 24px transparent;
+}
+
+.Visited {
+	background: url(../images/top_title_bg.png) center top no-repeat;
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 0px 15px;
+	display: block;
+}
+
+.link {
+	color: #3f3f3f;
+	font-size: 18px;
+	float: left;
+	height: 66px;
+	padding: 0px 15px;
+	background: url("../images/icon_right_more.png") no-repeat scroll right
+		24px transparent;
+}
+/* 顶部导航  搜索框*/
+.searchBar {
+	width: 194px;
+	overflow: hidden;
+	height: 32px;
+	margin: 28px 0px 0px 30px;
+	border-radius: 50px;
+	border: 2px solid #acd9dc;
+	display: inline-block;
+	float: left;
+}
+
+.navsearch {
+	color: #3CAC4C;
+	width: 140px;
+	height: 30px;
+	float: left;
+	background: none repeat scroll 0% 0% transparent;
+	border: 0px none;
+	line-height: 30px;
+	display: block;
+	margin-left: 10px;
+	padding: 0px;
+	outline: medium none;
+}
+
+.searchButton {
+	float: right;
+	height: 18px;
+	width: 18px;
+	margin-top: 8px;
+	margin-right: 8px;
+	border: 0px none;
+}
+
+.searchButton input {
+	border: medium none;
+	cursor: pointer;
+	height: 18px;
+	width: 18px;
+	background: url("../images/search.png") no-repeat center;
+}
+
+.green_leaf_r {
+	float: right;
+	margin-top: -372px;
+}
+
+/* 今日关注 */
+.today_focus {
+	width: 800px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding-left: 5px;
+}
+
+.today_focus p {
+	font-size: 22px;
+	margin-left: 15px;
+	color: #55bb66;
+}
+
+.today_focus hr { 
+	margin-left: 5px;
+}
+
+.today_focus img {
+	margin-top: 5px;
+}
+
+.hotspot {
+	width: 800px;
+	margin: 10px auto 100px;
+	padding-left: 5px;
+}
+
+.hotspot p {
+	font-size: 22px;
+	margin-left: 15px;
+	margin-top: 20px;
+	color: #55bb66;
+}
+
+.hotspot hr { 
+	margin-left: 5px; 
+}

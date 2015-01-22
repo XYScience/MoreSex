@@ -1,0 +1,112 @@
+/* ½¹µãÍ¼´úÂë */
+.bnspic {
+	width: 800px;
+	height: 362px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.bnspic a {
+	display: block;
+}
+
+.big_pic,.small_pic {
+	float: left;
+}
+
+.big_pic,.big_pic a,.big_pic img {
+	width: 500px;
+	height: 362px;
+}
+
+.big_pic {
+	overflow: hidden;
+	position: relative;
+	margin-right: 5px;
+}
+
+.big_pic li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	-webkit-transform: scale(0.9);
+	transform: scale(0.4);
+	z-index: -1;
+	transition: all linear 0.2s;
+}
+
+.big_pic .on {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	z-index: 1;
+}
+
+.big_pic a {
+	position: relative;
+}
+
+.big_pic .txt {
+	padding-left:10px;
+	width: 500px;
+	height: 46px;
+	line-height: 46px;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 15px;
+	color: #BDBDBD; 
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='true',
+		startColorstr='#7F000000', endColorstr='#7F000000' );
+	background: rgba(0, 0, 0, 0.5);
+	transition: all ease .2s;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.big_pic a:hover .txt {
+	color: #FFFFFF;
+}
+
+.small_pic {
+	width: 295px;
+	position: relative;
+	left: 1px;
+}
+
+.small_pic ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.small_pic a,.small_pic img {
+	width: 143px;
+	height: 120px;
+}
+
+.small_pic a {
+	padding: 1px;
+	background: #121013;
+	transition: all ease .2s;
+}
+
+.small_pic .on,.small_pic li:hover {
+	position: relative;
+	z-index: 1;
+}
+
+.small_pic .on a {
+	background: #FACC16;
+	padding: 2px;
+}
+
+.small_pic li {
+	width: 145px;
+	height: 122px;
+	margin: -1px 0 0 -1px;
+	float: left;
+}
