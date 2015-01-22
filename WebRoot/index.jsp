@@ -26,6 +26,7 @@
 <link href="css/today_focus.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/today_focus.js"></script>
 <script type="text/javascript">
+
 	$(function() {
 
 		$("#desSlideshow1").desSlideshow({
