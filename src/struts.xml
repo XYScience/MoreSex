@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
+<constant name="struts.action.extension" value="action,do,"></constant>
+	<package  name="sex" namespace="/" extends="struts-default">
+	
+	<action name="skillAction"  class="com.moresex.action.SkillAction" method="getSkill">
+     <result name="success">/skill.jsp</result>
+	</action>
+	
+	 <action name="healthAction"  class="com.moresex.action.HealthAction" method="getHealth">
+     <result name="success">/health.jsp</result>
+	 </action>
+	 
+	 <action name="physiologyAction"  class="com.moresex.action.PhysiologyAction" method="getPhysiology">
+     <result name="success">/physiology.jsp</result>
+	 </action>
+	 
+	  <action name="mentalityAction"  class="com.moresex.action.MentalityAction" method="getMentality">
+     <result name="success">/mentality.jsp</result>
+	 </action>
+	 
+	   <action name="birthControlAction"  class="com.moresex.action.BirthControlAction" method="getBirthControl">
+     <result name="success">/birthControl.jsp</result>
+	 </action>
+	 
+	</package>
 
 </struts>    
