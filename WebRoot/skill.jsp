@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -132,6 +133,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   </div>
 	   
 	   <br> <br> <br>
+	   
+	   <table width="800">
+        <tr>
+           <td>标题</td>
+           <td>租金</td>
+           <td>发布日期</td>
+        </tr>
+        <s:iterator value="infoList" var="f" >
+           <tr>
+           <td><s:property value="#f.id"/></td>
+           <td><s:property value="#f.title"/></td>
+           <td><s:property value="#f.time"/></td>
+        </tr>
+        </s:iterator>
+     </table>
+	   
+	   
+	   <br><br><br>
 	   
 	   <div class="news"> 
 	        <div class="news_img">
