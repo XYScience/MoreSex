@@ -16,7 +16,7 @@ public class InfoDaoImpl implements InfoDao{
 		Session session = HibernateSessionFactory.getSession();
 		Query query = session.createQuery("from Info f");
 		List<Info> list = query.list();
-		
+		//System.out.println(list.size());
 		return list;
 	}
 
@@ -31,5 +31,15 @@ public class InfoDaoImpl implements InfoDao{
 
 		return list;
 	}
+
+	@Override
+	public List<Info> getAllInfo(int pageAll) {
+		Session session = HibernateSessionFactory.getSession();
+		Query query = session.createQuery("from Info f");
+		List<Info> list = query.list();
+
+		return list;
+	}
+
 
 }

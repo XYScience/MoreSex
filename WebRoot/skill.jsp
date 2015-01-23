@@ -100,6 +100,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	});
 </script>
 
+
   </head>
   
   <body>
@@ -139,7 +140,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   <s:iterator value="infoList" var="f" >
 	   <div class="news"> 
 	        <div class="news_img">
-                <a href="#" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
+                <a href="<s:property value="#f.url"/>" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
                 </div>
                 <div class="news_title">
                 <h4><a href="<s:property value="#f.url"/>" title='夫妻到底该不该分床睡'><s:property value="#f.title"/></a> </h4>
@@ -158,13 +159,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	 </s:iterator>
 	
-	<div class=" news">
+	<!-- 
+	<div class="news">
+		<div class="page">
 	 <a href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a> &nbsp;&nbsp;
      <a href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
 		</div>
-		
-	</div>
+		 </div>   -->
+		 
+		 <s:div class="news" value="infoSizeList">
+		 	<div class="paging">
+		 		<span class="paging2"><a href="skillAction.action?page=<s:property value='page=1'/>"> 首页</a></span>
+		 		    <span><a href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a></span>
+		 		     <s:iterator value="infoList" var="f" >
+		 			<span><a href="skillAction.action?page=<s:property value='page=1'/>"><s:property value="infoSizeList.size/7"/></a></span>
+		 			 </s:iterator>
+		 			<span><a href="skillAction.action?page=<s:property value='page+1'/>">下一页</a></span>
+		 			<span><a href="skillAction.action?page=<s:property value='page=infoSizeList.size/7'/>">尾页</a></span>
+		 			
+		 			
+	                               共<em><s:property value="infoSizeList.size/7"/></em>页 <em><s:property value="infoSizeList.size"/></em>条
+		 			
+		 	</div>
+		 	
+	</s:div>
+	
+	 </div>
 	<!-- 底部 -->
 	<%@ include file="footer.jsp"%>
   </body>
+  
+  
+  
 </html>

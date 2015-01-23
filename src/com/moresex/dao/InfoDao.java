@@ -10,5 +10,7 @@ public interface InfoDao {
     public List<Info> getInfo();
 	
 	public List<Info> getInfo(int page);
-
+	
+	public List<Info> getAllInfo(int pageAll);
+	
 }
