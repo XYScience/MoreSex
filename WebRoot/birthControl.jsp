@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -104,10 +106,62 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!-- 内容部 -->
 	<div id="main">
 		<%@ include file="header.jsp"%>
+		
+		<div class="point">
+			<div class="photo">
+				<img src="images/health.png" />
+			</div>
+			<div class="content">
+				<p>避孕要点</p>
+			</div>
+			</div>
+		
 		<%@ include file="slide.jsp"%>
 		<div class="green_leaf_r">
 			<img src="images/green_leaf_r.jpg" alt="green leaf" />
 		</div>
+		
+		<br/><br/>
+		<div class="point">
+			<div class="photo">
+				<img src="images/health.png" />
+			</div>
+			<div class="content">
+				<p>一周要闻</p>
+			</div>
+	   </div>
+	   
+   
+	   <br><br><br>
+	   
+	   
+	   <s:iterator value="infoList" var="f" >
+	   <div class="news"> 
+	        <div class="news_img">
+                <a href="#" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
+                </div>
+                <div class="news_title">
+                <h4><a href="#" title='夫妻到底该不该分床睡'><s:property value="#f.title"/></a> </h4>
+                </div>
+                <div class="count">
+               <img src="/tpl/default/images/icon3.png" width="18" height="12" />589
+                </div>
+                
+                    <div class="news_content"><p>
+	1、年轻夫妇-----孩子成为分床的原因 
+	有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p></div><br>
+	
+	<span class=""><s:property value="#f.time"/></span>
+	<hr class="line">
+	</div>
+	
+	 </s:iterator>
+	
+	<div class=" news">
+	 	<div class="page">
+        <span class='paging2'>1</span><span><a href='index2.html'>2</a></span><span><a href='index3.html'>3</a></span><span><a href='index4.html'>4</a></span><span><a href='index5.html'>5</a></span><span><a href='index2.html'>下一页</a></span><span><a href='index13.html'>尾页</a></span>共<em>13</em>页<em>254</em>条                    
+           </div>     
+          </div>
 		
 	</div>
 	<!-- 底部 -->

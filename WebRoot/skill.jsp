@@ -132,32 +132,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 	   </div>
 	   
-	   <br> <br> <br>
-	   
-	   <table width="800">
-        <tr>
-           <td>标题</td>
-           <td>租金</td>
-           <td>发布日期</td>
-        </tr>
-        <s:iterator value="infoList" var="f" >
-           <tr>
-           <td><s:property value="#f.id"/></td>
-           <td><s:property value="#f.title"/></td>
-           <td><s:property value="#f.time"/></td>
-        </tr>
-        </s:iterator>
-     </table>
-	   
-	   
+   
 	   <br><br><br>
 	   
+	   
+	   <s:iterator value="infoList" var="f" >
 	   <div class="news"> 
 	        <div class="news_img">
                 <a href="#" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
                 </div>
                 <div class="news_title">
-                <h4><a href="#" title='夫妻到底该不该分床睡'>夫妻到底该不该分床睡</a> </h4>
+                <h4><a href="#" title='夫妻到底该不该分床睡'><s:property value="#f.title"/></a> </h4>
                 </div>
                 <div class="count">
                <img src="/tpl/default/images/icon3.png" width="18" height="12" />589
@@ -167,116 +152,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	1、年轻夫妇-----孩子成为分床的原因 
 	有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p></div><br>
 	
-	<span class="">2015-01-19</span>
+	<span class=""><s:property value="#f.time"/></span>
 	<hr class="line">
 	</div>
 	
-	 <div class="news"> 
-	        <div class="news_img">
-                <a href="#" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
-                </div>
-                <div class="news_title">
-                <h4><a href="#" title='夫妻到底该不该分床睡'>夫妻到底该不该分床睡</a> </h4>
-                </div>
-                <div class="count">
-                <img src="/tpl/default/images/icon3.png" width="18" height="12" />589
-                </div>
-                
-                    <div class="news_content"><p>
-	1、年轻夫妇-----孩子成为分床的原因 
-	有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p></div><br>
-	<span class="">2015-01-19</span>
-	<hr class="line">
-	</div>
-	
-	 <div class="news"> 
-	        <div class="news_img">
-                <a href="#" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
-                </div>
-                <div class="news_title">
-                <h4><a href="#" title='夫妻到底该不该分床睡'>夫妻到底该不该分床睡</a> </h4>
-                </div>
-                <div class="count">
-                <img src="/tpl/default/images/icon3.png" width="18" height="12" />589
-                </div>
-                    <div class="news_content"><p>
-	1、年轻夫妇-----孩子成为分床的原因 
-	有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p></div><br>
-	<span class="">2015-01-19</span>
-	<hr class="line">
-	</div>
-	
-	 <div class="news"> 
-	        <div class="news_img">
-                <a href="#" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
-                </div>
-                <div class="news_title">
-                <h4><a href="#" title='夫妻到底该不该分床睡'>夫妻到底该不该分床睡</a> </h4>
-                </div>
-                <div class="count">
-                <img src="/tpl/default/images/icon3.png" width="18" height="12" />589
-                </div>
-                
-                    <div class="news_content"><p>
-	1、年轻夫妇-----孩子成为分床的原因 
-	有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p></div><br>
-	<span class="">2015-01-19</span>
-	<hr class="line">
-	</div>
-	
-	 <div class="news"> 
-	        <div class="news_img">
-                <a href="#" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
-                </div>
-                <div class="news_title">
-                <h4><a href="#" title='夫妻到底该不该分床睡'>夫妻到底该不该分床睡</a> </h4>
-                </div>
-                <div class="count">
-                <img src="/tpl/default/images/icon3.png" width="18" height="12" />589
-                </div>
-                
-                    <div class="news_content"><p>
-	1、年轻夫妇-----孩子成为分床的原因 
-	有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p></div><br>
-	<span class="">2015-01-19</span>
-	<hr class="line">
-	</div>
-	
-	 <div class="news"> 
-	        <div class="news_img">
-                <a href="#" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
-                </div>
-                <div class="news_title">
-                <h4><a href="#" title='夫妻到底该不该分床睡'>夫妻到底该不该分床睡</a> </h4>
-                </div>
-                <div class="count">
-                <img src="/tpl/default/images/icon3.png" width="18" height="12" />589
-                </div>
-                
-                    <div class="news_content"><p>
-	1、年轻夫妇-----孩子成为分床的原因 
-	有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p></div><br>
-	<span class="">2015-01-19</span>
-	<hr class="line">
-	</div>
-	
-	 <div class="news"> 
-	        <div class="news_img">
-                <a href="#" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
-                </div>
-                <div class="news_title">
-                <h4><a href="#" title='夫妻到底该不该分床睡'>夫妻到底该不该分床睡</a> </h4>
-                </div>
-                <div class="count">
-                <img src="/tpl/default/images/icon3.png" width="18" height="12" />589
-                </div>
-                
-                    <div class="news_content"><p>
-	1、年轻夫妇-----孩子成为分床的原因 
-	有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p></div><br>
-	<span class="">2015-01-19</span>
-	<hr class="line">
-	</div>
+	 </s:iterator>
 	
 	<div class=" news">
 	 	<div class="page">
