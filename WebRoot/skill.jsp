@@ -142,7 +142,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <a href="#" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
                 </div>
                 <div class="news_title">
-                <h4><a href="#" title='夫妻到底该不该分床睡'><s:property value="#f.title"/></a> </h4>
+                <h4><a href="<s:property value="#f.url"/>" title='夫妻到底该不该分床睡'><s:property value="#f.title"/></a> </h4>
                 </div>
                 <div class="count">
                <img src="/tpl/default/images/icon3.png" width="18" height="12" />589
@@ -158,9 +158,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	 </s:iterator>
 	
+	<div class=" news">
 	 <a href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a> &nbsp;&nbsp;
      <a href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
-		
+		</div>
 		
 	</div>
 	<!-- 底部 -->
