@@ -16,7 +16,7 @@ public class InfoDaoImpl implements InfoDao{
 		Session session = HibernateSessionFactory.getSession();
 		Query query = session.createQuery("from Info f");
 		List<Info> list = query.list();
-		System.out.print(list);
+		
 		return list;
 	}
 

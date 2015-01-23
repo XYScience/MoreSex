@@ -158,11 +158,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	 </s:iterator>
 	
-	<div class=" news">
-	 	<div class="page">
-        <span class='paging2'>1</span><span><a href='index2.html'>2</a></span><span><a href='index3.html'>3</a></span><span><a href='index4.html'>4</a></span><span><a href='index5.html'>5</a></span><span><a href='index2.html'>下一页</a></span><span><a href='index13.html'>尾页</a></span>共<em>13</em>页<em>254</em>条                    
-           </div>     
-          </div>
+	 <a href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a> &nbsp;&nbsp;
+     <a href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
 		
 		
 	</div>
