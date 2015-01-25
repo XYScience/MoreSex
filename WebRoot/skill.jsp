@@ -7,7 +7,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC >
+<!DOCTYPE HTML  >
 <html>
   <head>
     <base href="<%=basePath%>">
@@ -181,9 +181,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                <img src="images/click_num.png" width="18" height="12" /><s:property value="#f.click"/>
                 </div>
                 
-                    <div class="news_content"><p>
-	1、年轻夫妇-----孩子成为分床的原因 
-	有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p></div><br>
+                    <s:div class="news_content" value="infoContentList" var="i"><p>
+	<s:property value="#i.content"/>
+	</p></s:div><br>
 	
 	<span class=""><s:date name="#f.time" format="yyyy-MM-dd"></s:date></span>
 	<hr class="line">

@@ -18,16 +18,16 @@ public class SkillAction extends ActionSupport implements RequestAware {
 
 	List<ArticleInfo> infoSizeList = new ArrayList<ArticleInfo>();
 
-	List<ArticleInfo> infoAverageList = new ArrayList<ArticleInfo>();
+	List<ArticleInfo> infoContentList = new ArrayList<ArticleInfo>();
 
 	private int page = 1;
 
-	public List<ArticleInfo> getInfoAverageList() {
-		return infoAverageList;
+	public List<ArticleInfo> getInfoContentList() {
+		return infoContentList;
 	}
 
-	public void setInfoAverageList(List<ArticleInfo> infoAverageList) {
-		this.infoAverageList = infoAverageList;
+	public void setInfoContentList(List<ArticleInfo> infoContentList) {
+		this.infoContentList = infoContentList;
 	}
 
 	public List<ArticleInfo> getInfoSizeList() {
@@ -58,6 +58,8 @@ public class SkillAction extends ActionSupport implements RequestAware {
 
 		InfoDao dao = new InfoDaoImpl();
 		infoList = dao.getInfo(page);
+		
+		infoContentList = dao.getInfo();
 
 		infoSizeList = dao.getAllInfo(dao.getInfo().size());
 

@@ -7,7 +7,7 @@
 			+ path + "/";
 %>
 
-<!DOCTYPE HTML PUBLIC >
+<!DOCTYPE HTML>
 <html>
 <head>
 <!--<base href="<%=basePath%>"> -->
