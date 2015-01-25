@@ -38,9 +38,17 @@
 }
 
 .page {
-	padding-left: 200px;
+	padding-left:20px;
+	text-align:center;
 	padding-top: 40px;
-	text-align: center;
+	padding-bottom: 60px;
+}
+.page span{
+	height: 30px;
+	float: left;
+	line-height: 30px;
+	padding:0px 15px;
+	border: 1px solid #DDD;
 }
 
 .line {
@@ -49,19 +57,13 @@
 }
 
 .paging {
-	padding-left:310px;
 	text-align:center;
-	float:left;
 	padding-top: 40px;
 	padding-bottom: 60px;
-	
-	
-}
-
-.paging span {
-	display: inline-block;
+	padding-left: 20px;
 	float: left;
 }
+
 
 .paging span {
 	height: 30px;
@@ -69,7 +71,6 @@
 	float: left;
 	line-height: 30px;
 	padding:0px 15px;
-	display: block;
 	border: 1px solid #DDD;
 }
 

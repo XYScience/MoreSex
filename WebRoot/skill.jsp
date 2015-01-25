@@ -1,12 +1,13 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="/struts-tags" prefix="s" %>
+
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML PUBLIC >
 <html>
   <head>
     <base href="<%=basePath%>">
@@ -108,16 +109,46 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div id="main">
 		<%@ include file="header.jsp"%>
 		
-		<div class="point">
-			<div class="photo">
-				<img src="images/health.png" />
-			</div>
-			<div class="content">
-				<p>技巧要点</p>
-			</div>
-			</div>
+		<!--首页幻灯片 开始-->
+
+<div class="slide clearfix" >
+	<div class="slider">
+	
+	<s:iterator value="infoList" var="f" >
+		<div class="slider-item">
+			<img src="images/1.jpg" alt="" /> <img class="thumbnail"
+				src="images/11.jpg" alt="" />
+			<div class="caption" ><a href="" ><s:property value="#f.title"/></a></div>
+		</div>
 		
-		<%@ include file="slide.jsp"%>
+		</s:iterator>
+		<!-- 
+		<div class="slider-item">
+			<img src="images/2.jpg" alt="" /> <img class="thumbnail"
+				src="images/22.jpg" alt="" />
+			<div class="caption">简介</div>
+		</div>
+		<div class="slider-item">
+			<img src="images/3.jpg" alt="" /> <img class="thumbnail"
+				src="images/33.jpg" alt="" />
+			<div class="caption">简介</div>
+		</div>
+		<div class="slider-item">
+			<img src="images/4.jpg" alt="" /> <img class="thumbnail"
+				src="images/44.jpg" alt="" />
+			<div class="caption">简介</div>
+		</div>
+		<div class="slider-item">
+			<img src="images/5.jpg" alt="" /> <img class="thumbnail"
+				src="images/55.jpg" alt="" />
+			<div class="caption">简介</div>
+		</div> -->
+	</div>
+</div>
+
+<!--首页幻灯片结束-->
+		
+		
 		<div class="green_leaf_r">
 			<img src="images/green_leaf_r.jpg" alt="green leaf" />
 		</div>
@@ -137,23 +168,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   <br><br><br>
 	   
 	   
+	   
 	   <s:iterator value="infoList" var="f" >
 	   <div class="news"> 
 	        <div class="news_img">
-                <a href="<s:property value="#f.url"/>" ><img src="images/bed.png" height="140" alt="夫妻到底该不该分床睡" /></a>
+                <a href="" ><img src="images/bed.png" height="140" alt="<s:property value="#f.title"/>" /></a>
                 </div>
                 <div class="news_title">
-                <h4><a href="<s:property value="#f.url"/>" title='夫妻到底该不该分床睡'><s:property value="#f.title"/></a> </h4>
+                <h4><a href="" title="<s:property value="#f.title"/>"><s:property value="#f.title"/></a> </h4>
                 </div>
                 <div class="count">
-               <img src="/tpl/default/images/icon3.png" width="18" height="12" />589
+               <img src="images/click_num.png" width="18" height="12" />589
                 </div>
                 
                     <div class="news_content"><p>
 	1、年轻夫妇-----孩子成为分床的原因 
 	有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p></div><br>
 	
-	<span class=""><s:property value="#f.time"/></span>
+	<span class=""><s:date name="#f.time" format="yyyy-MM-dd"></s:date></span>
 	<hr class="line">
 	</div>
 	
@@ -162,27 +194,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!-- 
 	<div class="news">
 		<div class="page">
-	 <a href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a> &nbsp;&nbsp;
-     <a href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
+	<span> <a href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a></span> &nbsp;&nbsp;
+    <span> <a href="skillAction.action?page=<s:property value='page+1'/>">下一页</a></span>
 		</div>
-		 </div>   -->
+		 </div>    -->
 		 
-		 <s:div class="news" value="infoSizeList">
+		 <div class="news">
 		 	<div class="paging">
+		 	<span> <a href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a></span>
+            <span> <a href="skillAction.action?page=<s:property value='page+1'/>">下一页</a></span>
+		 	
 		 		<span class="paging2"><a href="skillAction.action?page=<s:property value='page=1'/>"> 首页</a></span>
-		 		    <span><a href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a></span>
-		 		     <s:iterator value="infoList" var="f" >
-		 			<span><a href="skillAction.action?page=<s:property value='page=1'/>"><s:property value="infoSizeList.size/7"/></a></span>
-		 			 </s:iterator>
-		 			<span><a href="skillAction.action?page=<s:property value='page+1'/>">下一页</a></span>
+		 		   
+		 		    <s:iterator var="p" begin="1" end="5">
+		 		  <span><a href="skillAction.action?page=<s:property value='#p'/>"><s:property value='#p'/></a></span>
+		 		    </s:iterator>
+		 		    
 		 			<span><a href="skillAction.action?page=<s:property value='page=infoSizeList.size/7'/>">尾页</a></span>
 		 			
-		 			
 	                               共<em><s:property value="infoSizeList.size/7"/></em>页 <em><s:property value="infoSizeList.size"/></em>条
-		 			
+	                               
 		 	</div>
 		 	
-	</s:div>
+	</div>
 	
 	 </div>
 	<!-- 底部 -->

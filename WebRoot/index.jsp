@@ -7,7 +7,7 @@
 			+ path + "/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML PUBLIC >
 <html>
 <head>
 <!--<base href="<%=basePath%>"> -->
@@ -120,6 +120,7 @@
 <body>
 	<!-- 内容部 -->
 	<div id="main">
+	<div>
 		<%@ include file="header.jsp"%>
 		<%@ include file="slide.jsp"%>
 		<div class="green_leaf_r">
@@ -134,6 +135,7 @@
 			<p>热点</p>
 			<hr color="#5B6" width="800" />
 			<%@ include file="hotspot.jsp"%>
+		</div>
 		</div>
 	</div>
 	<!-- 底部 -->
