@@ -127,20 +127,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="caption"><a href="" ><s:property value="#f.title"/></a></div>
 		</div>-->
 		
-		
-		<s:iterator value="infoList" var="f" >
+		<!-- 
 		<div class="slider-item">
 			<img src="images/3.jpg" alt="" /> <img class="thumbnail"
 				src="images/33.jpg" alt="" />
 			<div class="caption"><a href="" ><s:property value="#f.title"/></a></div>
-		</div>
-		</s:iterator>
-		<!-- <div class="slider-item">
+		</div> -->
+		
+		<s:iterator value="infoList" var="f" >
+		 <div class="slider-item">
 			<img src="images/4.jpg" alt="" /> <img class="thumbnail"
 				src="images/44.jpg" alt="" />
-			<div class="caption">简介</div>
+			<div class="caption"><a href="" ><s:property value="#f.title"/></a></div>
 		</div>
-		<div class="slider-item">
+		</s:iterator>
+		<!--<div class="slider-item">
 			<img src="images/5.jpg" alt="" /> <img class="thumbnail"
 				src="images/55.jpg" alt="" />
 			<div class="caption">简介</div>
