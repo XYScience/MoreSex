@@ -19,6 +19,8 @@
 		</property>
 		<property name="myeclipse.connection.profile">moresex</property>
 		<mapping resource="com/moresex/entity/Info.hbm.xml" />
+		<mapping resource="com/moresex/entity/ArticleInfo.hbm.xml" />
+		<mapping resource="com/moresex/entity/ArticleText.hbm.xml" />
 
 	</session-factory>
 

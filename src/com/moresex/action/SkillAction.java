@@ -8,41 +8,41 @@ import org.apache.struts2.interceptor.RequestAware;
 
 import com.moresex.dao.InfoDao;
 import com.moresex.dao.impl.InfoDaoImpl;
-import com.moresex.entity.Info;
+import com.moresex.entity.ArticleInfo;
 import com.opensymphony.xwork2.ActionSupport;
 
 @SuppressWarnings("serial")
 public class SkillAction extends ActionSupport implements RequestAware {
 
-	List<Info> infoList = new ArrayList<Info>();
+	List<ArticleInfo> infoList = new ArrayList<ArticleInfo>();
 
-	List<Info> infoSizeList = new ArrayList<Info>();
+	List<ArticleInfo> infoSizeList = new ArrayList<ArticleInfo>();
 
-	List<Info> infoAverageList = new ArrayList<Info>();
+	List<ArticleInfo> infoAverageList = new ArrayList<ArticleInfo>();
 
 	private int page = 1;
 
-	public List<Info> getInfoAverageList() {
+	public List<ArticleInfo> getInfoAverageList() {
 		return infoAverageList;
 	}
 
-	public void setInfoAverageList(List<Info> infoAverageList) {
+	public void setInfoAverageList(List<ArticleInfo> infoAverageList) {
 		this.infoAverageList = infoAverageList;
 	}
 
-	public List<Info> getInfoSizeList() {
+	public List<ArticleInfo> getInfoSizeList() {
 		return infoSizeList;
 	}
 
-	public void setInfoSizeList(List<Info> infoSizeList) {
+	public void setInfoSizeList(List<ArticleInfo> infoSizeList) {
 		this.infoSizeList = infoSizeList;
 	}
 
-	public List<Info> getInfoList() {
+	public List<ArticleInfo> getInfoList() {
 		return infoList;
 	}
 
-	public void setInfoList(List<Info> infoList) {
+	public void setInfoList(List<ArticleInfo> infoList) {
 		this.infoList = infoList;
 	}
 

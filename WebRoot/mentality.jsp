@@ -181,7 +181,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <h4><a href="" title="<s:property value="#f.title"/>"><s:property value="#f.title"/></a> </h4>
                 </div>
                 <div class="count">
-               <img src="/tpl/default/images/icon3.png" width="18" height="12" />589
+               <img src="/tpl/default/images/icon3.png" width="18" height="12" /><s:property value="#f.click"/>
                 </div>
                 
                     <div class="news_content"><p>
