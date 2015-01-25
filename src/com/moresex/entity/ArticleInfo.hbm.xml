@@ -22,9 +22,10 @@
         <property name="source" type="java.lang.String">
             <column name="source" length="32" />
         </property>
+      
         <property name="click" type="java.lang.Integer">
             <column name="click" />
-        </property>
+        </property> 
         <set name="articleTexts" inverse="true">
             <key>
                 <column name="text_url" length="128" />

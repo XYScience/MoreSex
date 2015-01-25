@@ -2,6 +2,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="/struts-tags" prefix="s" %>
 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -167,23 +170,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    
 	   <br><br><br>
 	   
-	   
-	   
 	   <s:iterator value="infoList" var="f" >
 	   <div class="news"> 
 	        <div class="news_img">
                 <a href="" ><img src="images/bed.png" height="140" alt="<s:property value="#f.title"/>" /></a>
                 </div>
                 <div class="news_title">
-                <h4><a href="" title="<s:property value="#f.title"/>"><s:property value="#f.title"/></a> </h4>
+                <h4><a href=""><s:property value="#f.title"/></a> </h4>
                 </div>
                 <div class="count">
                <img src="images/click_num.png" width="18" height="12" /><s:property value="#f.click"/>
                 </div>
                 
-                    <s:div class="news_content" value="infoContentList" var="i"><p>
-	<s:property value="#i.content"/>
-	</p></s:div><br>
+                    <div class="news_content" >
+                   <!-- <s:iterator value="infoContentList" var="f" begin="1" end="2">
+                   
+                    <p><s:property value="#f.subTitle"/></p>  
+                  
+                 
+                  <c:when test="${fn:length(f.content) > 30}">
+						<c:out value="${fn:substring(f.content, 0, 30)}..." />
+							</c:when>
+						<c:otherwise>
+							<c:out value="${f.content }" />
+						</c:otherwise>
+						</s:iterator>
+                  -->
+                   
+                   
+                
+	</div><br>
 	
 	<span class=""><s:date name="#f.time" format="yyyy-MM-dd"></s:date></span>
 	<hr class="line">
