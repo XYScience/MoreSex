@@ -14,7 +14,7 @@ public class InfoDaoImpl implements InfoDao{
 	@Override
 	public List<ArticleInfo> getInfo() {
 		Session session = HibernateSessionFactory.getSession();
-		Query query = session.createQuery("from ArticleInfo f");
+		Query query = session.createQuery("from ArticleText f");
 		List<ArticleInfo> list = query.list();
 		//System.out.println(list.size());
 		return list;
