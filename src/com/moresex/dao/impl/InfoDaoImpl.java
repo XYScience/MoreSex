@@ -5,6 +5,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import com.moresex.dao.InfoDao;
 import com.moresex.entity.ArticleInfo;
+import com.moresex.entity.ArticleText;
 import com.moresex.entity.HibernateSessionFactory;
 
 public class InfoDaoImpl implements InfoDao {
@@ -42,7 +43,14 @@ public class InfoDaoImpl implements InfoDao {
 		return list;
 	}
 
-	@Override
+	@Override 
+	public List<ArticleText> getContent() {
+		Session session = HibernateSessionFactory.getSession();
+		List<ArticleText> list = session.createCriteria(ArticleText.class).list();
+		//System.out.println(list.size());
+		return list;
+	}
+ 
 	public List<ArticleInfo> getHomeInfo(int page) {
 		Session session = HibernateSessionFactory.getSession();
 		Query query = session.createQuery("from ArticleInfo f");
@@ -52,6 +60,6 @@ public class InfoDaoImpl implements InfoDao {
 		List<ArticleInfo> list = query.list();
 
 		return list;
-	}
+	} 
 
 }
