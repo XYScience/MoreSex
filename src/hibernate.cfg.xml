@@ -9,11 +9,10 @@
 		<property name="dialect">
 			org.hibernate.dialect.MySQLDialect
 		</property>
-		<property name="connection.url">
-			jdbc:mysql://192.168.1.100:3306/moresex
+		<property name="connection.url">jdbc:mysql://118.244.151.176:10001/moresex
 		</property>
-		<property name="connection.username">huazai</property>
-		<property name="connection.password">123456</property>
+		<property name="connection.username">hua</property>
+		<property name="connection.password">12302014</property>
 		<property name="connection.driver_class">
 			com.mysql.jdbc.Driver
 		</property>
