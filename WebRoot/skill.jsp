@@ -1,9 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="/struts-tags" prefix="s" %>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <%
 String path = request.getContextPath();
@@ -183,19 +181,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </div>
                 
                     <div class="news_content" >
-                   <!-- <s:iterator value="infoContentList" var="f" begin="1" end="2">
+                   <s:iterator value="infoContentList" var="f" begin="1" end="2">
                    
                     <p><s:property value="#f.subTitle"/></p>  
                   
                  
-                  <c:when test="${fn:length(f.content) > 30}">
-						<c:out value="${fn:substring(f.content, 0, 30)}..." />
-							</c:when>
-						<c:otherwise>
-							<c:out value="${f.content }" />
-						</c:otherwise>
-						</s:iterator>
-                  -->
+                  </s:iterator>
                    
                    
                 
