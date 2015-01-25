@@ -7,16 +7,17 @@ import com.moresex.dao.InfoDao;
 import com.moresex.entity.ArticleInfo;
 import com.moresex.entity.HibernateSessionFactory;
 
-public class InfoDaoImpl implements InfoDao{
+public class InfoDaoImpl implements InfoDao {
 
-	private  final int PAGE_SIZE = 7;
-	
+	private final int PAGE_SIZE = 7;
+	private final int PAGE_SIZE_HOME = 6;
+
 	@Override
 	public List<ArticleInfo> getInfo() {
 		Session session = HibernateSessionFactory.getSession();
 		Query query = session.createQuery("from ArticleInfo f");
 		List<ArticleInfo> list = query.list();
-		//System.out.println(list.size());
+		// System.out.println(list.size());
 		return list;
 	}
 
@@ -24,9 +25,9 @@ public class InfoDaoImpl implements InfoDao{
 	public List<ArticleInfo> getInfo(int page) {
 		Session session = HibernateSessionFactory.getSession();
 		Query query = session.createQuery("from ArticleInfo f");
-		query.setFirstResult((page-1)*PAGE_SIZE);
+		query.setFirstResult((page - 1) * PAGE_SIZE);
 		query.setMaxResults(PAGE_SIZE);
-		
+
 		List<ArticleInfo> list = query.list();
 
 		return list;
@@ -41,5 +42,16 @@ public class InfoDaoImpl implements InfoDao{
 		return list;
 	}
 
+	@Override
+	public List<ArticleInfo> getHomeInfo(int page) {
+		Session session = HibernateSessionFactory.getSession();
+		Query query = session.createQuery("from ArticleInfo f");
+		query.setFirstResult((page - 1) * PAGE_SIZE_HOME);
+		query.setMaxResults(PAGE_SIZE_HOME);
+
+		List<ArticleInfo> list = query.list();
+
+		return list;
+	}
 
 }
