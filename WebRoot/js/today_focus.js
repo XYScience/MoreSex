@@ -66,7 +66,7 @@
             g.find(".switchBigPic").children("div").children("p").css("position","absolute").css("padding-left","10px").css("margin","0px").css("bottom","5px").css("opacity","0.6").css("background-color","#000").css("color","#FFF").css("font-size","15px").css("width","100%").css("line-height","46px");
             g.find(".nav").css("width",thumbnail_width+"px").css("height",slideshow_height+"px").css("position","absolute").css("right","0px");
             g.find(".nav").children("li").css("height","49px").css("background-image","url("+directory+"flashtext-bg.jpg)").css("line-height","49px").css("border-bottom","1px solid #CCCCCC").css("border-right","1px solid #CCCCCC");
-            g.find(".nav").children("li").children("a").css("text-decoration","none").css("height","49px").css("display","block").css("padding-left","26px").css("font-size","14px");
+            g.find(".nav").children("li").children("a").css("text-decoration","none").css("height","49px").css("display","block").css("padding-left","26px").css("font-size","17px");
             g.find(".nav").children("li").css("margin-left","0px");
             g.find(".switchBigPic").children("div").hide();
         }

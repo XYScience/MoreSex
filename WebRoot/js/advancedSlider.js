@@ -34,7 +34,7 @@
 											&& parseInt(h.browser.version) < 9 ? f
 											.css("filter", "")
 											: f.stop().animate({
-												opacity : 1
+												opacity : 0.5
 											}, c.settings.timerFadeDuration)
 								}
 								U = true;
@@ -1174,7 +1174,7 @@
 				h.browser.msie && parseInt(h.browser.version) < 9 || h(b).css({
 					opacity : 0
 				}).stop().animate({
-					opacity : 1
+					opacity : 0.5
 				}, c.settings.timerFadeDuration);
 			if (h.browser.msie && parseInt(h.browser.version) < 9)
 				b = G_vmlCanvasManager.initElement(b);

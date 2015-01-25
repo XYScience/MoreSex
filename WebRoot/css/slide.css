@@ -209,7 +209,7 @@
 }
 
 .pixel .slideshow-controls {
-	background: url(../images/playpause.png) no-repeat;
+	/*background: url(../images/playpause.png) no-repeat;*/
 	width: 38px;
 	height: 38px;
 	top: 50%;
@@ -366,7 +366,7 @@
 .pixel .thumbnail .caption .background {
 	background-color: #000;
 	opacity: 0.5;
-	filter: alpha(opacity =           50);
+	filter: alpha(opacity =             50);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
 
