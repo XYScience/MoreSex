@@ -11,14 +11,16 @@ import com.moresex.entity.HibernateSessionFactory;
 
 
 public class DetailsDaoImpl implements IDetailsDao {
+	private final int PAGE=1;
 
 	@Override
 	public List<ArticleText> getDetails(String articleurl) {
 		Session session = HibernateSessionFactory.getSession();
 		Query query = session.createQuery("from ArticleText at where at.articleInfo.articleUrl=:articleurl");	
 		query.setParameter("articleurl", articleurl);
+//		query.setFirstResult(PAGE);
 		List<ArticleText> list = query.list();
-		System.out.println("list...."+list);
+//		System.out.println("list...."+list);
 		return list;
 		
 	}

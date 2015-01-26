@@ -192,10 +192,7 @@
 						</a>
 					</h4>
 
-					<h4>
-						<a href=""><s:property value="#f.title" />
-						</a>
-					</h4>
+					
 				</div>
 				<div class="count">
 					<img src="images/click_num.png" width="18" height="12" />
