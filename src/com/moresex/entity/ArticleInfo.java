@@ -8,6 +8,7 @@ import java.util.Set;
  * ArticleInfo entity. @author MyEclipse Persistence Tools
  */
 
+@SuppressWarnings("serial")
 public class ArticleInfo implements java.io.Serializable {
 
 	// Fields
