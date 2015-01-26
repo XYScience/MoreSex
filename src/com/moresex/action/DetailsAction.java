@@ -1,11 +1,11 @@
 package com.moresex.action;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.List; 
 
 import com.moresex.dao.IDetailsDao;
-import com.moresex.dao.impl.DetailsDaoImpl;
-import com.moresex.entity.ArticleText;
+import com.moresex.dao.impl.DetailsDaoImpl; 
+import com.moresex.entity.ArticleText; 
 import com.opensymphony.xwork2.ActionSupport;
 
 @SuppressWarnings("serial")
@@ -36,8 +36,8 @@ public class DetailsAction extends ActionSupport {
 
 		IDetailsDao detailsDao = new DetailsDaoImpl();
 		contentList = detailsDao.getDetails(articleUrl);
-//		System.out.println("contentList..."+contentList.get(0).getContent());
+		// System.out.println("contentList..."+contentList.get(0).getContent());
+
 		return SUCCESS;
 	}
-
 }
