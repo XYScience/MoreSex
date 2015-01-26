@@ -152,7 +152,6 @@
 
 		<!--首页幻灯片结束-->
 
-
 		<div class="green_leaf_r">
 			<img src="images/green_leaf_r.jpg" alt="green leaf" />
 		</div>
@@ -168,27 +167,26 @@
 			</div>
 		</div>
 
-
 		<br> <br> <br>
 
 		<s:iterator value="infoList" var="f">
 			<div class="news">
 				<div class="news_img">
-					<a href="#"><img src="images/bed.png" height="140"
+					<a
+						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"><img
+						src="images/bed.png" height="140"
 						alt="<s:property value="#f.title"/>" /> </a>
 				</div>
+				
 				<div class="news_title">
-
 					<h4>
 						<a
 							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
-							target="_blank" title="<s:property value="#f.title"/>"> </a>
-					</h4>
-
-					<h4>
-						<a href=""><s:property value="#f.title" /> </a>
+							target="_blank" title="<s:property value="#f.title"/>"><s:property
+								value="#f.title" /> </a>
 					</h4>
 				</div>
+				
 				<div class="count">
 					<img src="images/click_num.png" width="18" height="12" />
 					<s:property value="#f.click" />
@@ -201,10 +199,7 @@
 							<s:property value="#f.subTitle" />
 						</p>
 
-
 					</s:iterator>
-
-
 
 				</div>
 				<br> <span class=""><s:date name="#f.time"
