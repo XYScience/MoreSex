@@ -180,17 +180,29 @@
 		<s:iterator value="infoList" var="f">
 			<div class="news">
 				<div class="news_img">
+
 					<a
+						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
+							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
+							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
+						target="_blank"><img src="images/bed.png" height="140"
+						alt="<s:property value="#f.title"/>" /> </a> <a
 						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"><img
 						src="images/bed.png" height="140"
 						alt="<s:property value="#f.title"/>" /> </a>
+
 				</div>
 				<div class="news_title">
 					<h4>
 						<a
-							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
+							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
+							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
+							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
 							target="_blank" title="<s:property value="#f.title"/>"><s:property
 								value="#f.title" /> </a>
+
+
+
 					</h4>
 				</div>
 				<div class="count">
@@ -221,20 +233,20 @@
 			</div>
 		</s:iterator>
 
-		<div class="news" >
-			<div class="paging" >
-				<span id="getNews_last" onmouseover="toGreen()" onmouseout="toRed()"> <a
+		<div class="news">
+			<div class="paging">
+				<span id="getNews_last" onmouseover="toGreen()" onmouseout="toRed()">
+					<a
 					href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a>
-				</span> 
-				<span id="getNews_last1" onmouseover="toGreen1()" onmouseout="toRed1()"> <a
+				</span> <span id="getNews_last1" onmouseover="toGreen1()"
+					onmouseout="toRed1()"> <a
 					href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
-				</span> 
-				<span class="paging2" ><a
+				</span> <span class="paging2"><a
 					href="skillAction.action?page=<s:property value='page=1'/>"> 首页</a>
 				</span>
 
 				<s:iterator var="p" begin="1" end="5">
-					<span ><a
+					<span><a
 						href="skillAction.action?page=<s:property value='#p'/>"><s:property
 								value='#p' /> </a> </span>
 				</s:iterator>
