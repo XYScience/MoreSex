@@ -121,8 +121,7 @@
 						<img src="images/1.jpg" alt="" /> <img class="thumbnail"
 							src="images/11.jpg" alt="" />
 						<div class="caption">
-							<a href=""><s:property value="#f.title" />
-							</a>
+							<a href=""><s:property value="#f.title" /> </a>
 						</div>
 					</div>
 
@@ -159,8 +158,7 @@
 		</div>
 
 
-		<br />
-		<br />
+		<br /> <br />
 		<div class="point">
 			<div class="photo">
 				<img src="images/health.png" />
@@ -171,30 +169,24 @@
 		</div>
 
 
-		<br>
-		<br>
-		<br>
+		<br> <br> <br>
 
 		<s:iterator value="infoList" var="f">
 			<div class="news">
 				<div class="news_img">
-					<a href=""><img src="images/bed.png" height="140"
-						alt="<s:property value="#f.title"/>" />
-					</a>
+					<a href="#"><img src="images/bed.png" height="140"
+						alt="<s:property value="#f.title"/>" /> </a>
 				</div>
 				<div class="news_title">
 
 					<h4>
 						<a
 							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
-							target="_blank" title="<s:property value="#f.title"/>"><s:property
-								value="#f.title" />
-						</a>
+							target="_blank" title="<s:property value="#f.title"/>"> </a>
 					</h4>
 
 					<h4>
-						<a href=""><s:property value="#f.title" />
-						</a>
+						<a href=""><s:property value="#f.title" /> </a>
 					</h4>
 				</div>
 				<div class="count">
@@ -216,8 +208,7 @@
 
 				</div>
 				<br> <span class=""><s:date name="#f.time"
-						format="yyyy-MM-dd"></s:date>
-				</span>
+						format="yyyy-MM-dd"></s:date> </span>
 				<hr class="line">
 			</div>
 
@@ -244,16 +235,13 @@
 				<s:iterator var="p" begin="1" end="5">
 					<span><a
 						href="skillAction.action?page=<s:property value='#p'/>"><s:property
-								value='#p' />
-					</a>
-					</span>
+								value='#p' /> </a> </span>
 				</s:iterator>
 
 				<span><a
 					href="skillAction.action?page=<s:property value='page=infoSizeList.size/7'/>">尾页</a>
-				</span> 共<em><s:property value="infoSizeList.size/7" />
-				</em>页 <em><s:property value="infoSizeList.size" />
-				</em>条
+				</span> 共<em><s:property value="infoSizeList.size/7" /> </em>页 <em><s:property
+						value="infoSizeList.size" /> </em>条
 
 			</div>
 

@@ -33,11 +33,12 @@
 			method="getBirthControl">
 			<result name="success">/birthControl.jsp</result>
 		</action>
-		
- <!-- 添加对具体内容的查询 -->
-	 <action name="DetailsAction" class="com.moresex.action.DetailsAction" method="doQ">
-	 <result name="success">/details.jsp</result>
-	 </action>
+
+		<!-- 添加对具体内容的查询 -->
+		<action name="DetailsAction" class="com.moresex.action.DetailsAction"
+			method="doQ">
+			<result name="success">/details.jsp</result>
+		</action>
 
 	</package>
 
