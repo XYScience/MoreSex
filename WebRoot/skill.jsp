@@ -5,6 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
+
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -39,6 +40,7 @@
 <link rel="stylesheet" type="text/css" href="css/slide.css">
 <script type="text/javascript" src="js/advancedSlider.js"></script>
 <script type="text/javascript" src="js/excanvas.compiled.js"></script>
+<script type="text/javascript" src="js/mouse.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('.slider').advancedSlider({
@@ -107,6 +109,7 @@
 </script>
 
 
+
 </head>
 
 <body>
@@ -155,7 +158,6 @@
 
 		<!--首页幻灯片结束-->
 
-
 		<div class="green_leaf_r">
 			<img src="images/green_leaf_r.jpg" alt="green leaf" />
 		</div>
@@ -178,102 +180,66 @@
 		<s:iterator value="infoList" var="f">
 			<div class="news">
 				<div class="news_img">
-					<a href=""><img src="images/bed.png" height="140"
+					<a
+						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"><img
+						src="images/bed.png" height="140"
 						alt="<s:property value="#f.title"/>" /> </a>
 				</div>
 				<div class="news_title">
 					<h4>
-						<a href=""><s:property value="#f.title" /> </a>
+						<a
+							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
+							target="_blank" title="<s:property value="#f.title"/>"><s:property
+								value="#f.title" /> </a>
 					</h4>
 				</div>
 				<div class="count">
 					<img src="images/click_num.png" width="18" height="12" />
 					<s:property value="#f.click" />
 				</div>
+				<br> <br>
 
 
 				<div class="news_content">
 					<p>
-						<s:subset source="#f.articleTexts" count="1" var="text">
-								<c:choose>
-									<c:when test="${fn:length(text.content) > 30}">
-										<c:out value="${fn:substring(text.content, 0, 30)}......" />
-									</c:when>
-									<c:otherwise>
-										<s:property value="#text.content"/>
-									</c:otherwise>
-								</c:choose>
-						</s:subset>
-						<%-- <s:iterator value="#f.articleTexts" id="text" begin="0" end="1">
-							<c:set var="str" value="${text.content }" />
-								<c:choose>
-									<c:when test="${fn:length(str) > 30}">
-										<c:out value="${fn:substring(str, 0, 30)}......" />
-									</c:when>
-									<c:otherwise>
-										<c:out value="${str}" />
-									</c:otherwise>
-								</c:choose>
-						</s:iterator> --%>
+						<s:iterator value="#f.articleTexts" var="text">
+							<c:choose>
+								<c:when test="${fn:length(text.content) > 55}">
+									<c:out value="${fn:substring(text.content, 0, 55)}......" />
+								</c:when>
+								<c:otherwise>
+									<c:out value="${text.content}" />
+								</c:otherwise>
+							</c:choose>
+						</s:iterator>
 					</p>
 				</div>
-				<br>
-
-
-				<!-- 
-			<c:forEach items="${requestScope.infoContentList }" var="f">
-				<div class="news_content">
-					<c:choose>
-						<c:when test="${fn:length(f.content) > 12}">
-							<c:out value="${fn:substring(f.content, 0, 12)}..." />
-						</c:when>
-						<c:otherwise>
-							<c:out value="${f.content}" />
-						</c:otherwise>
-					</c:choose>
-
-				</div>
-
-	<span class=""><s:date name="#f.time" format="yyyy-MM-dd"></s:date>
-				</span>
-				<hr class="line">
-
-
-			</c:forEach> -->
-
-				<span class=""><s:date name="#f.time" format="yyyy-MM-dd"></s:date>
-				</span>
+				<br> <span class=""><s:date name="#f.time"
+						format="yyyy-MM-dd"></s:date> </span>
 
 				<hr class="line">
 			</div>
 		</s:iterator>
 
-
-		<!-- 
-	<div class="news">
-		<div class="page">
-	<span> <a href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a></span> &nbsp;&nbsp;
-    <span> <a href="skillAction.action?page=<s:property value='page+1'/>">下一页</a></span>
-		</div>
-		 </div>    -->
-
-		<div class="news">
-			<div class="paging">
-				<span> <a
+		<div class="news" >
+			<div class="paging" >
+				<span id="getNews_last" onmouseover="toGreen()" onmouseout="toRed()"> <a
 					href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a>
-				</span> <span> <a
+				</span> 
+				<span id="getNews_last1" onmouseover="toGreen1()" onmouseout="toRed1()"> <a
 					href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
-				</span> <span class="paging2"><a
+				</span> 
+				<span class="paging2" ><a
 					href="skillAction.action?page=<s:property value='page=1'/>"> 首页</a>
 				</span>
 
 				<s:iterator var="p" begin="1" end="5">
-					<span><a
+					<span ><a
 						href="skillAction.action?page=<s:property value='#p'/>"><s:property
 								value='#p' /> </a> </span>
 				</s:iterator>
 
-				<span><a
+				<span id="getNews1" onmouseover="toGreen3()" onmouseout="toRed3()"><a
 					href="skillAction.action?page=<s:property value='page=infoSizeList.size/7'/>">尾页</a>
 				</span> 共<em><s:property value="infoSizeList.size/7" /> </em>页 <em><s:property
 						value="infoSizeList.size" /> </em>条

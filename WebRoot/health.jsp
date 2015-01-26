@@ -1,6 +1,9 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="/struts-tags" prefix="s"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -38,6 +41,7 @@
 <link rel="stylesheet" type="text/css" href="css/slide.css">
 <script type="text/javascript" src="js/advancedSlider.js"></script>
 <script type="text/javascript" src="js/excanvas.compiled.js"></script>
+<script type="text/javascript" src="js/mouse.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('.slider').advancedSlider({
@@ -177,44 +181,59 @@
 		<s:iterator value="infoList" var="f">
 			<div class="news">
 				<div class="news_img">
-					<a href=""><img src="images/bed.png" height="140"
+					<a
+						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"><img
+						src="images/bed.png" height="140"
 						alt="<s:property value="#f.title"/>" /> </a>
 				</div>
 				<div class="news_title">
 					<h4>
-						<a href="" title="<s:property value="#f.title"/>"><s:property
+						<a
+							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
+							target="_blank" title="<s:property value="#f.title"/>"><s:property
 								value="#f.title" /> </a>
 					</h4>
 				</div>
 				<div class="count">
-					<img src="/tpl/default/images/icon3.png" width="18" height="12" />
+					<img src="images/click_num.png" width="18" height="12" />
 					<s:property value="#f.click" />
 				</div>
 
+
 				<div class="news_content">
 					<p>
-						<s:iterator value="#f.articleTexts" var="text">
-							<div class="news_content">
-								<s:property value="#text.content" />
-							</div>
-						</s:iterator>
 
+						<s:iterator value="#f.articleTexts" id="text" begin="0" end="1">
+							<c:set var="str" value="${text.content }" />
+							<c:choose>
+								<c:when test="${fn:length(str) > 52}">
+									<c:out value="${fn:substring(str, 0, 52)}......" />
+								</c:when>
+								<c:otherwise>
+									<c:out value="${str}" />
+								</c:otherwise>
+							</c:choose>
+						</s:iterator>
 					</p>
 				</div>
-				<br><br> <span class=""><s:date name="#f.time"
+				<br> <span class=""><s:date name="#f.time"
 						format="yyyy-MM-dd"></s:date> </span>
+
 				<hr class="line">
 			</div>
-
 		</s:iterator>
+
+
 
 		<div class="news">
 			<div class="paging">
-				<span> <a
+				<span id="getNews_last" onmouseover="toGreen()" onmouseout="toRed()"> <a
 					href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a>
-				</span> <span> <a
+				</span> 
+				<span id="getNews_last1" onmouseover="toGreen1()" onmouseout="toRed1()"> <a
 					href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
-				</span> <span class="paging2"><a
+				</span> 
+				<span class="paging2"><a
 					href="skillAction.action?page=<s:property value='page=1'/>"> 首页</a>
 				</span>
 
@@ -224,7 +243,7 @@
 								value='#p' /> </a> </span>
 				</s:iterator>
 
-				<span><a
+				<span id="getNews1" onmouseover="toGreen3()" onmouseout="toRed3()"><a
 					href="skillAction.action?page=<s:property value='page=infoSizeList.size/7'/>">尾页</a>
 				</span> 共<em><s:property value="infoSizeList.size/7" /> </em>页 <em><s:property
 						value="infoSizeList.size" /> </em>条

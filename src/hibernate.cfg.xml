@@ -9,8 +9,9 @@
 		<property name="dialect">
 			org.hibernate.dialect.MySQLDialect
 		</property>
-		<property name="connection.url">
-			jdbc:mysql://118.244.151.176:10001/moresex
+
+		<property name="connection.url">jdbc:mysql://118.244.151.176:10001/moresex
+
 		</property>
 		<property name="connection.username">hua</property>
 		<property name="connection.password">12302014</property>
