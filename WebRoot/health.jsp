@@ -183,7 +183,7 @@
 				<div class="news_img">
 					<a
 						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"><img
-						src="images/bed.png" height="140"
+						src="images/health_bg.png" height="140"
 						alt="<s:property value="#f.title"/>" /> </a>
 				</div>
 				<div class="news_title">
