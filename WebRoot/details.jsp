@@ -33,13 +33,13 @@
 
 
 <%@ include file="header.jsp" %>
-	<s:iterator value="details" var="d">
+<!-- 	<s:iterator value="details" var="d"> -->
 <!-- 		<span class=""><s:property value="#d.title" /> </span> -->
 <!-- 		<span class=""><s:property value="#d.content" /> </span> -->
 <!-- 		<span class=""><s:property value="#d.title" /> </span> -->
 <!-- 		<span class=""><s:property value="#d.title" /> </span> -->
-	</s:iterator>
-<!-- 主题内容 -->
+	<!-- 	</s:iterator> -->
+	<!-- 主题内容 -->
 	<div class="con">
 	
 		<!-- 	左侧内容 -->
@@ -59,13 +59,13 @@
 			<div class="content_text">
 			<s:iterator value="contentList" var="con">
 				<em>文章导读</em>
-				<p>请求数据</p>
+				<p><s:property value="#con.subTitle"/></p>
 				<p>
 					<img alt="testimg01" style="width:550px;height:380px," src="images/testimg02.png">
 
 				</p>
 				
-					<p><span><s:property value="con.content"/></span></p>
+					<p><span><s:property value="#con.content"/></span></p>
 				
 				</s:iterator> 
 			</div>
@@ -73,8 +73,8 @@
 			
 			
 			<div class="paging">
-				<a href="#">1</a> <a href="http://www.baidu.com">2</a>
-			</div>
+				
+			</div><!-- 分页结束 -->
 			<div class="love">
 				<span class="span"></span>
 				<h2>猜你喜欢</h2>
