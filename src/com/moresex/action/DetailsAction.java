@@ -10,7 +10,47 @@ import com.opensymphony.xwork2.ActionSupport;
 
 @SuppressWarnings("serial")
 public class DetailsAction extends ActionSupport {
+	
 	private String articleUrl;
+	private String articleTitle;
+
+	public String getArticleTitle() {
+		return articleTitle;
+	}
+
+	public void setArticleTitle(String articleTitle) {
+		this.articleTitle = articleTitle;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getSource() {
+		return source;
+	}
+
+	public void setSource(String source) {
+		this.source = source;
+	}
+
+	
+	private String author;
+	private String source;
+	private String time;
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+
 	private List<ArticleText> contentList = new ArrayList<ArticleText>();
 
 	public List<ArticleText> getContentList() {
@@ -36,7 +76,7 @@ public class DetailsAction extends ActionSupport {
 
 		IDetailsDao detailsDao = new DetailsDaoImpl();
 		contentList = detailsDao.getDetails(articleUrl);
-//		System.out.println("contentList..."+contentList.get(0).getContent());
+		// System.out.println("contentList..."+contentList.get(0).getContent());
 		return SUCCESS;
 	}
 
