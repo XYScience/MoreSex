@@ -1,4 +1,5 @@
-<%@page import="com.opensymphony.xwork2.Action"%>
+<%-- <%@page import="com.opensymphony.xwork2.Action"%>
+ --%>
 <%@page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@taglib uri="/struts-tags" prefix="s"%>
 <%
@@ -64,7 +65,6 @@
 			</div>
 
 			<div class="content_text">
-				<!-- 				<s:iterator value="contentList" var="con"> -->
 				<em>文章导读</em>
 				<p>
 					<!-- 						<s:property value="#con.subTitle" /> -->
@@ -73,12 +73,12 @@
 					<img alt="testimg01" style="width:550px;height:380px,"
 						src="images/testimg02.png">
 				</p>
-				<s:iterator value="contentList" var="con">
+				<s:iterator value="contentList" var="con" status="a">
 					<p>
+						<s:property value="#a.index" />
 						<span><s:property value="#con.content" /> </span>
 					</p>
 				</s:iterator>
-				<!-- 				</s:iterator> -->
 			</div>
 
 

@@ -185,11 +185,10 @@
 						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
 							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
 							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
-						target="_blank"><img src="images/bed.png" height="140"
-						alt="<s:property value="#f.title"/>" /> </a> <a
-						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"><img
-						src="images/bed.png" height="140"
-						alt="<s:property value="#f.title"/>" /> </a>
+						target="_blank">
+						<img src="images/bed.png" height="140"
+						alt="<s:property value="#f.title"/>" />
+					</a>
 
 				</div>
 				<div class="news_title">
