@@ -185,7 +185,7 @@
                 <a href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
 							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
 							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
-							target="_blank" ><img src="images/bed.png" height="140" alt="<s:property value="#f.title"/>" /></a>
+							target="_blank" ><img src="images/health_bg.png" height="140" alt="<s:property value="#f.title"/>" /></a>
                 </div>
                 <div class="news_title">
                 <h4><a href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
@@ -193,14 +193,28 @@
 							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
 							target="_blank" title="<s:property value="#f.title"/>"><s:property value="#f.title"/></a> </h4>
                 </div>
-                <div class="count">
-               <img src="/tpl/default/images/icon3.png" width="18" height="12" /><s:property value="#f.click"/>
-                </div>
-                
-                    <div class="news_content"><p>
-	1、年轻夫妇-----孩子成为分床的原因 
-	有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p></div><br>
-	
+               <div class="count">
+					<img src="images/click_num.png" width="18" height="12" />
+					<s:property value="#f.click" />
+				</div>
+				
+                <br> <br>
+
+
+				<div class="news_content">
+					<p>
+						<s:iterator value="#f.articleTexts" var="text">
+							<c:choose>
+								<c:when test="${fn:length(text.content) > 55}">
+									<c:out value="${fn:substring(text.content, 0, 55)}......" />
+								</c:when>
+								<c:otherwise>
+									<c:out value="${text.content}" />
+								</c:otherwise>
+							</c:choose>
+						</s:iterator>
+					</p>
+				</div><br>
 	<span class=""><s:date name="#f.time" format="yyyy-MM-dd"></s:date></span>
 	<hr class="line">
 	</div>
