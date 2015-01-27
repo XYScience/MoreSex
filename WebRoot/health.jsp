@@ -150,73 +150,85 @@
 				<p>一周要闻</p>
 			</div>
 
-
 		</div>
 
-
 		<br> <br> <br>
-
 
 		<s:iterator value="infoList" var="f">
 			<div class="news">
 				<div class="news_img">
+
 					<a
 						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
-							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
-							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
-						target="_blank"><img src="images/bed.png" height="140"
+							&articleTitle=<s:property value="#f.title"/>
+							&author=<s:property value="#f.author"/>
+							&source=<s:property value="#f.source"/>
+							&time=<s:property value="#f.time"/>"
+						target="_blank"> <img src="images/bed.png" height="140"
 						alt="<s:property value="#f.title"/>" /> </a>
+
 				</div>
 				<div class="news_title">
 					<h4>
 						<a
 							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
-							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
-							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
-							target="_blank" title="<s:property value="#f.title"/>"><s:property
+
+							&articleTitle=<s:property value="#f.title"/>
+							&author=<s:property value="#f.author"/>
+							&source=<s:property value="#f.source"/>
+							&time=<s:property value="#f.time"/>"
+							target="_blank" title="<s:property value="#f.title"/>"> <s:property
 								value="#f.title" /> </a>
+
 					</h4>
 				</div>
 				<div class="count">
-					<img src="/tpl/default/images/icon3.png" width="18" height="12" />
+					<img src="images/click_num.png" width="18" height="12" />
 					<s:property value="#f.click" />
 				</div>
+				<br> <br>
 
 				<div class="news_content">
-					<p>1、年轻夫妇-----孩子成为分床的原因
-						有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p>
+					<p>
+						<s:iterator value="#f.articleTexts" var="text" status="num">
+							<c:choose>
+								<c:when test="${num.index == 0}">
+									<c:out value="${fn:substring(text.content, 0, 55)}......" />
+								</c:when>
+							</c:choose>
+						</s:iterator>
+					</p>
 				</div>
 				<br> <span class=""><s:date name="#f.time"
 						format="yyyy-MM-dd"></s:date> </span>
+
 				<hr class="line">
 			</div>
-
 		</s:iterator>
 
 		<div class="news">
 			<div class="paging">
-				<span> <a
-					href="skill/page_<s:property value='page>1?page-1:1'/>.html">上一页</a>
-				</span> <span> <a
-					href="skill/page_<s:property value='page+1'/>.html">下一页</a> </span> <span
+				<span id="getNews_last" onmouseover="toGreen()" onmouseout="toRed()">
+					<a href="skill/page_<s:property value='page>1?page-1:1'/>.html">上一页</a>
+				</span> <span id="getNews_last1" onmouseover="toGreen1()"
+					onmouseout="toRed1()"> <a
+					href="health/page_<s:property value='page+1'/>.html">下一页</a> </span> <span
 					class="paging2"><a
-					href="skill/page_<s:property value='page=1'/>.html"> 首页</a> </span>
+					href="health/page_<s:property value='page=1'/>.html"> 首页</a> </span>
 
 				<s:iterator var="p" begin="1" end="5">
-					<span><a href="skill/page_<s:property value='#p'/>.html"><s:property
+					<span><a href="health/page_<s:property value='#p'/>.html"><s:property
 								value='#p' /> </a> </span>
 				</s:iterator>
 
-				<span><a
-					href="skill/page_<s:property value='page=infoSizeList.size/7'/>.html">尾页</a>
+				<span id="getNews1" onmouseover="toGreen3()" onmouseout="toRed3()"><a
+					href="health/page_<s:property value='page=infoSizeList.size/7'/>.html">尾页</a>
 				</span> 共<em><s:property value="infoSizeList.size/7" /> </em>页 <em><s:property
 						value="infoSizeList.size" /> </em>条
 
 			</div>
 
 		</div>
-
-
 	</div>
 	<!-- 底部 -->
 	<%@ include file="footer.jsp"%>

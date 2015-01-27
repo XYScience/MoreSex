@@ -174,13 +174,21 @@
 					</h4>
 				</div>
 				<div class="count">
-					<img src="/tpl/default/images/icon3.png" width="18" height="12" />
+					<img src="images/click_num.png" width="18" height="12" />
 					<s:property value="#f.click" />
 				</div>
+				<br> <br>
 
 				<div class="news_content">
-					<p>1、年轻夫妇-----孩子成为分床的原因
-						有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p>
+					<p>
+						<s:iterator value="#f.articleTexts" var="text" status="num">
+							<c:choose>
+								<c:when test="${num.index == 0}">
+									<c:out value="${fn:substring(text.content, 0, 55)}......" />
+								</c:when>
+							</c:choose>
+						</s:iterator>
+					</p>
 				</div>
 				<br> <span class=""><s:date name="#f.time"
 						format="yyyy-MM-dd"></s:date> </span>
@@ -192,19 +200,19 @@
 		<div class="news">
 			<div class="paging">
 				<span> <a
-					href="skill/page_<s:property value='page>1?page-1:1'/>.html">上一页</a>
+					href="birthControl/page_<s:property value='page>1?page-1:1'/>.html">上一页</a>
 				</span> <span> <a
-					href="skill/page_<s:property value='page+1'/>.html">下一页</a> </span> <span
+					href="birthControl/page_<s:property value='page+1'/>.html">下一页</a> </span> <span
 					class="paging2"><a
-					href="skill/page_<s:property value='page=1'/>.html"> 首页</a> </span>
+					href="birthControl/page_<s:property value='page=1'/>.html"> 首页</a> </span>
 
 				<s:iterator var="p" begin="1" end="5">
-					<span><a href="skill/page_<s:property value='#p'/>.html"><s:property
+					<span><a href="birthControl/page_<s:property value='#p'/>.html"><s:property
 								value='#p' /> </a> </span>
 				</s:iterator>
 
 				<span><a
-					href="skill/page_<s:property value='page=infoSizeList.size/7'/>.html">尾页</a>
+					href="birthControl/page_<s:property value='page=infoSizeList.size/7'/>.html">尾页</a>
 				</span> 共<em><s:property value="infoSizeList.size/7" /> </em>页 <em><s:property
 						value="infoSizeList.size" /> </em>条
 

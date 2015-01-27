@@ -41,6 +41,27 @@
 		<from>/skill/page_([0-9]+).html</from>
 		<to type="forward">/skillAction.action?page=$1</to>
 	</rule>
+	
+	<rule>
+		<from>/health/page_([0-9]+).html</from>
+		<to type="forward">/healthAction.action?page=$1</to>
+	</rule>
+	
+	<rule>
+		<from>/birthControl/page_([0-9]+).html</from>
+		<to type="forward">/birthControlAction.action?page=$1</to>
+	</rule>
+	
+	<rule>
+		<from>/mentality/page_([0-9]+).html</from>
+		<to type="forward">/mentalityAction.action?page=$1</to>
+	</rule>
+	
+	<rule>
+		<from>/phsyiology/page_([0-9]+).html</from>
+		<to type="forward">/phsyiologyAction.action?page=$1</to>
+	</rule>
+	
 	<outbound-rule>
 		<from>DetailsAction?articleUrl=$1&amp;articleTitle=$2&amp;author=$3&amp;source=$4&amp;time=$5&amp;</from>
 		<to type="forward">/details.jsp</to>

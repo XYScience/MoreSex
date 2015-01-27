@@ -82,9 +82,11 @@
 			<div class="love">
 				<span class="span"></span>
 				<h2>猜你喜欢</h2>
+
 				<span class="love_a1"> <a rel="nofollow" 
 					href="javaScript:void(0)">干燥</a> <a rel="nofollow" 
-					href="#">阴凉</a> </span> <span class="love_a4"> <a rel="nofollow"
+
+					href="javaScript:void(0)">阴凉</a> </span> <span class="love_a4"> <a rel="nofollow"
 					href="javaScript:void(0)" title="分享到QQ空间">分享</a> </span> <span
 					class="love_a3"><a rel="nofollow" href="javaScript:void(0)">不感兴趣</a>
 				</span> <span class="love_a2"><a rel="nofollow"
