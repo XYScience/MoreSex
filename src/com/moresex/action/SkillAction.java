@@ -19,17 +19,9 @@ public class SkillAction extends ActionSupport implements RequestAware {
 
 	List<ArticleInfo> infoSizeList = new ArrayList<ArticleInfo>();
 
-	List<ArticleText> infoContentList = new ArrayList<ArticleText>();
 
 	private int page = 1;
 
-	public List<ArticleText> getInfoContentList() {
-		return infoContentList;
-	}
-
-	public void setInfoContentList(List<ArticleText> infoContentList) {
-		this.infoContentList = infoContentList;
-	}
 
 	public List<ArticleInfo> getInfoSizeList() {
 		return infoSizeList;
@@ -60,9 +52,6 @@ public class SkillAction extends ActionSupport implements RequestAware {
 		InfoDao dao = new InfoDaoImpl();
 		infoList = dao.getInfo(page);
 		
-		infoContentList = dao.getContent();
-		//System.out.println(infoContentList);
-		request.put("infoContentList", infoContentList);
 
 		infoSizeList = dao.getAllInfo(dao.getInfo().size());
 
@@ -73,14 +62,10 @@ public class SkillAction extends ActionSupport implements RequestAware {
 		return SUCCESS;
 	}
 
-
 	@Override
 	public void setRequest(Map<String, Object> arg0) {
-		// TODO Auto-generated method stub
 		this.request = arg0;
-		this.request1 = arg0;
 	}
 
 	Map<String, Object> request;
-	Map<String, Object> request1;
 }

@@ -43,7 +43,6 @@
 
 <body>
 
-
 	<%@ include file="header.jsp"%>
 
 
@@ -67,9 +66,6 @@
 			<div class="content_text">
 				<em>文章导读</em>
 				<p>
-					<!-- 						<s:property value="#con.subTitle" /> -->
-				</p>
-				<p>
 					<img alt="testimg01" style="width:550px;height:380px,"
 						src="images/testimg02.png">
 				</p>
@@ -80,8 +76,6 @@
 					</p>
 				</s:iterator>
 			</div>
-
-
 
 			<div class="paging"></div>
 			<!-- 分页结束 -->
@@ -101,29 +95,47 @@
 			</div>
 			<div class="left_bottom_list1">
 				<ul>
+
 					<li class="list_bottom_list1"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a></li>
+					</a>
+					</li>
+
+
 
 					<li class="list_bottom_list2"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a></li>
+					</a>
+					</li>
+
+
 
 					<li class="list_bottom_list3"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a></li>
+					</a>
+					</li>
+
+
 
 					<li class="list_bottom_list4"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a></li>
+					</a>
+					</li>
+
+
 
 					<li class="list_bottom_list5"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a></li>
+					</a>
+					</li>
+
+
 
 					<li class="list_bottom_list6"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a></li>
+					</a>
+					</li>
+
 
 				</ul>
 			</div>
@@ -134,22 +146,14 @@
 			<div class="hot_links">
 				<h3>热门链接</h3>
 				<ul>
-					<li><a href="javaScript:void(0)">生活</a>
-					</li>
-					<li><a href="javaScript:void(0)">感冒</a>
-					</li>
-					<li><a href="javaScript:void(0)">发热</a>
-					</li>
-					<li><a href="javaScript:void(0)">少白头</a>
-					</li>
-					<li><a href="javaScript:void(0)">糖尿病</a>
-					</li>
-					<li><a href="javaScript:void(0)">跑步</a>
-					</li>
-					<li><a href="javaScript:void(0)">上火</a>
-					</li>
-					<li><a href="javaScript:void(0)">瑜伽</a>
-					</li>
+					<li><a href="javaScript:void(0)">生活</a></li>
+					<li><a href="javaScript:void(0)">感冒</a></li>
+					<li><a href="javaScript:void(0)">发热</a></li>
+					<li><a href="javaScript:void(0)">少白头</a></li>
+					<li><a href="javaScript:void(0)">糖尿病</a></li>
+					<li><a href="javaScript:void(0)">跑步</a></li>
+					<li><a href="javaScript:void(0)">上火</a></li>
+					<li><a href="javaScript:void(0)">瑜伽</a></li>
 				</ul>
 				<div class="clear"></div>
 			</div>

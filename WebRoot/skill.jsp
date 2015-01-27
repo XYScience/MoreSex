@@ -5,7 +5,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -108,8 +107,6 @@
 	});
 </script>
 
-
-
 </head>
 
 <body>
@@ -132,27 +129,6 @@
 					</div>
 
 				</s:iterator>
-				<!-- 
-		<div class="slider-item">
-			<img src="images/2.jpg" alt="" /> <img class="thumbnail"
-				src="images/22.jpg" alt="" />
-			<div class="caption">简介</div>
-		</div>
-		<div class="slider-item">
-			<img src="images/3.jpg" alt="" /> <img class="thumbnail"
-				src="images/33.jpg" alt="" />
-			<div class="caption">简介</div>
-		</div>
-		<div class="slider-item">
-			<img src="images/4.jpg" alt="" /> <img class="thumbnail"
-				src="images/44.jpg" alt="" />
-			<div class="caption">简介</div>
-		</div>
-		<div class="slider-item">
-			<img src="images/5.jpg" alt="" /> <img class="thumbnail"
-				src="images/55.jpg" alt="" />
-			<div class="caption">简介</div>
-		</div> -->
 			</div>
 		</div>
 
@@ -161,7 +137,6 @@
 		<div class="green_leaf_r">
 			<img src="images/green_leaf_r.jpg" alt="green leaf" />
 		</div>
-
 
 		<br /> <br />
 		<div class="point">
@@ -173,9 +148,7 @@
 			</div>
 		</div>
 
-
 		<br> <br> <br>
-
 
 		<s:iterator value="infoList" var="f">
 			<div class="news">
@@ -183,6 +156,7 @@
 
 					<a
 						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
+
 							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
 							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
 						target="_blank"> <img src="images/bed.png" height="140"
@@ -193,11 +167,10 @@
 					<h4>
 						<a
 							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
+
 							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
 							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
 							target="_blank"> <s:property value="#f.title" /> </a>
-
-
 
 					</h4>
 				</div>
@@ -207,17 +180,13 @@
 				</div>
 				<br> <br>
 
-
 				<div class="news_content">
 					<p>
-						<s:iterator value="#f.articleTexts" var="text">
+						<s:iterator value="#f.articleTexts" var="text" status="num">
 							<c:choose>
-								<c:when test="${fn:length(text.content) > 55}">
+								<c:when test="${num.index == 0}">
 									<c:out value="${fn:substring(text.content, 0, 55)}......" />
 								</c:when>
-								<c:otherwise>
-									<c:out value="${text.content}" />
-								</c:otherwise>
 							</c:choose>
 						</s:iterator>
 					</p>
