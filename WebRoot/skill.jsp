@@ -132,27 +132,7 @@
 					</div>
 
 				</s:iterator>
-				<!-- 
-		<div class="slider-item">
-			<img src="images/2.jpg" alt="" /> <img class="thumbnail"
-				src="images/22.jpg" alt="" />
-			<div class="caption">简介</div>
-		</div>
-		<div class="slider-item">
-			<img src="images/3.jpg" alt="" /> <img class="thumbnail"
-				src="images/33.jpg" alt="" />
-			<div class="caption">简介</div>
-		</div>
-		<div class="slider-item">
-			<img src="images/4.jpg" alt="" /> <img class="thumbnail"
-				src="images/44.jpg" alt="" />
-			<div class="caption">简介</div>
-		</div>
-		<div class="slider-item">
-			<img src="images/5.jpg" alt="" /> <img class="thumbnail"
-				src="images/55.jpg" alt="" />
-			<div class="caption">简介</div>
-		</div> -->
+
 			</div>
 		</div>
 
@@ -183,21 +163,23 @@
 
 					<a
 						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
-							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
-							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
-						target="_blank"><img src="images/bed.png" height="140"
-						alt="<s:property value="#f.title"/>" /> </a> 
+							&articleTitle=<s:property value="#f.title"/>
+							&author=<s:property value="#f.author"/>
+							&source=<s:property value="#f.source"/>
+							&time=<s:property value="#f.time"/>"
+						   target="_blank"><img src="images/bed.png" height="140" alt="<s:property value="#f.title"/>" /> </a>
 
 				</div>
 				<div class="news_title">
 					<h4>
 						<a
 							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
-							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
-							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
+							&articleTitle=<s:property value="#f.title"/>
+							&author=<s:property value="#f.author"/>
+							&source=<s:property value="#f.source"/>
+							&time=<s:property value="#f.time"/>"
 							target="_blank" title="<s:property value="#f.title"/>"><s:property
 								value="#f.title" /> </a>
-
 
 
 					</h4>
@@ -211,14 +193,11 @@
 
 				<div class="news_content">
 					<p>
-						<s:iterator value="#f.articleTexts" var="text">
+						<s:iterator value="#f.articleTexts" var="text" status="num">
 							<c:choose>
-								<c:when test="${fn:length(text.content) > 55}">
+								<c:when test="${num.index == 0}">
 									<c:out value="${fn:substring(text.content, 0, 55)}......" />
 								</c:when>
-								<c:otherwise>
-									<c:out value="${text.content}" />
-								</c:otherwise>
 							</c:choose>
 						</s:iterator>
 					</p>
@@ -235,8 +214,8 @@
 				<span id="getNews_last" onmouseover="toGreen()" onmouseout="toRed()">
 					<a
 					href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a>
-				</span> <span id="getNews_last1" onmouseover="toGreen1()"
-					onmouseout="toRed1()"> <a
+				</span> 
+				<span id="getNews_last1" onmouseover="toGreen1()" onmouseout="toRed1()"> <a
 					href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
 				</span> <span class="paging2"><a
 					href="skillAction.action?page=<s:property value='page=1'/>"> 首页</a>
