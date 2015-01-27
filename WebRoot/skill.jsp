@@ -5,7 +5,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="f"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -108,8 +107,6 @@
 	});
 </script>
 
-
-
 </head>
 
 <body>
@@ -132,7 +129,6 @@
 					</div>
 
 				</s:iterator>
-
 			</div>
 		</div>
 
@@ -141,7 +137,6 @@
 		<div class="green_leaf_r">
 			<img src="images/green_leaf_r.jpg" alt="green leaf" />
 		</div>
-
 
 		<br /> <br />
 		<div class="point">
@@ -153,9 +148,7 @@
 			</div>
 		</div>
 
-
 		<br> <br> <br>
-
 
 		<s:iterator value="infoList" var="f">
 			<div class="news">
@@ -163,11 +156,13 @@
 
 					<a
 						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
+
 							&articleTitle=<s:property value="#f.title"/>
 							&author=<s:property value="#f.author"/>
 							&source=<s:property value="#f.source"/>
 							&time=<s:property value="#f.time"/>"
-						   target="_blank"><img src="images/bed.png" height="140" alt="<s:property value="#f.title"/>" /> </a>
+						target="_blank"><img src="images/bed.png" height="140"
+						alt="<s:property value="#f.title"/>" /> </a>
 
 				</div>
 				<div class="news_title">
@@ -180,8 +175,6 @@
 							&time=<s:property value="#f.time"/>"
 							target="_blank" title="<s:property value="#f.title"/>"><s:property
 								value="#f.title" /> </a>
-
-
 					</h4>
 				</div>
 				<div class="count">
@@ -189,7 +182,6 @@
 					<s:property value="#f.click" />
 				</div>
 				<br> <br>
-
 
 				<div class="news_content">
 					<p>
@@ -214,8 +206,8 @@
 				<span id="getNews_last" onmouseover="toGreen()" onmouseout="toRed()">
 					<a
 					href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a>
-				</span> 
-				<span id="getNews_last1" onmouseover="toGreen1()" onmouseout="toRed1()"> <a
+				</span> <span id="getNews_last1" onmouseover="toGreen1()"
+					onmouseout="toRed1()"> <a
 					href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
 				</span> <span class="paging2"><a
 					href="skillAction.action?page=<s:property value='page=1'/>"> 首页</a>

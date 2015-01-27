@@ -10,6 +10,6 @@ public interface IDetailsDao {
 	 * @param titile
 	 * @return
 	 */
-	public List<ArticleText> getDetails(String articleUrl);
+	public List<ArticleText> getDetails(String articleUrl); 
 
 }

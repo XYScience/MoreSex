@@ -8,9 +8,10 @@
 		<div class="switchBigPic">
 			<s:iterator value="infoList" var="f">
 				<div>
-					<a href="<s:property value="#f.url"/>" title="#" target="_blank"><img
-						class="pic" src="images/001.jpg" width="380" height="300" alt="#" />
-					</a>
+					<a
+						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
+						title="#f.title" target="_blank"><img class="pic"
+						src="images/001.jpg" width="380" height="300" alt="#" /> </a>
 					<p>
 						<s:property value="#f.title" />
 					</p>
@@ -21,9 +22,9 @@
 
 		<ul class="nav">
 			<s:iterator value="infoList" var="f">
-				<li><a href="<s:property value="#f.url"/>" title="#"
-					target="_blank"><s:property value="#f.title" /> </a>
-				</li>
+				<li><a href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
+					title="#f.title" target="_blank"><s:property value="#f.title" />
+				</a></li>
 
 			</s:iterator>
 		</ul>

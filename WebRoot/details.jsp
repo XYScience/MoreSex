@@ -15,15 +15,15 @@
 <base href="<%=basePath%>">
 
 <!-- 	访问article_info表的到文章标题，作者来源 -->
-	<%
-		String author = new String(request.getParameter("author").getBytes(
-				"ISO-8859-1"), "utf-8");
-		String source = new String(request.getParameter("source").getBytes(
-				"ISO-8859-1"), "utf-8");
-		String time = request.getParameter("time");
-		String articleTitle = new String(request.getParameter(
-				"articleTitle").getBytes("ISO-8859-1"), "utf-8");
-	%>
+<%
+	String author = new String(request.getParameter("author").getBytes(
+			"ISO-8859-1"), "utf-8");
+	String source = new String(request.getParameter("source").getBytes(
+			"ISO-8859-1"), "utf-8");
+	String time = request.getParameter("time");
+	String articleTitle = new String(request.getParameter(
+			"articleTitle").getBytes("ISO-8859-1"), "utf-8");
+%>
 
 <title><%=articleTitle%></title>
 <meta http-equiv="pragma" content="no-cache">
@@ -42,10 +42,8 @@
 
 <body>
 
-
 	<%@ include file="header.jsp"%>
 
-	
 	<!-- 主题内容 -->
 	<div class="con">
 
@@ -64,11 +62,7 @@
 			</div>
 
 			<div class="content_text">
-				<!-- 				<s:iterator value="contentList" var="con"> -->
 				<em>文章导读</em>
-				<p>
-					<!-- 						<s:property value="#con.subTitle" /> -->
-				</p>
 				<p>
 					<img alt="testimg01" style="width:550px;height:380px,"
 						src="images/testimg02.png">
@@ -78,10 +72,7 @@
 						<span><s:property value="#con.content" /> </span>
 					</p>
 				</s:iterator>
-				<!-- 				</s:iterator> -->
 			</div>
-
-
 
 			<div class="paging"></div>
 			<!-- 分页结束 -->
@@ -100,29 +91,35 @@
 			</div>
 			<div class="left_bottom_list1">
 				<ul>
-					<li class="list_bottom_list1"> <a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+					<li class="list_bottom_list1"><a href="#"> <img
+							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a>
+					</li>
 
-					<li class="list_bottom_list2"> <a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+					<li class="list_bottom_list2"><a href="#"> <img
+							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a>
+					</li>
 
 					<li class="list_bottom_list3"><a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a>
+					</li>
 
 					<li class="list_bottom_list4"><a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a>
+					</li>
 
 					<li class="list_bottom_list5"><a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a>
+					</li>
 
-					<li class="list_bottom_list6"> <a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+					<li class="list_bottom_list6"><a href="#"> <img
+							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a>
+					</li>
 
 				</ul>
 			</div>

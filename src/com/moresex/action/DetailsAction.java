@@ -10,7 +10,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 @SuppressWarnings("serial")
 public class DetailsAction extends ActionSupport {
-	
+
 	private String articleUrl;
 	private String articleTitle;
 
@@ -38,10 +38,10 @@ public class DetailsAction extends ActionSupport {
 		this.source = source;
 	}
 
-	
 	private String author;
 	private String source;
 	private String time;
+
 	public String getTime() {
 		return time;
 	}
@@ -49,7 +49,6 @@ public class DetailsAction extends ActionSupport {
 	public void setTime(String time) {
 		this.time = time;
 	}
-
 
 	private List<ArticleText> contentList = new ArrayList<ArticleText>();
 
@@ -77,7 +76,7 @@ public class DetailsAction extends ActionSupport {
 		IDetailsDao detailsDao = new DetailsDaoImpl();
 		contentList = detailsDao.getDetails(articleUrl);
 		// System.out.println("contentList..."+contentList.get(0).getContent());
+
 		return SUCCESS;
 	}
-
 }
