@@ -13,12 +13,8 @@
 			<div class="Nav_list">
 				<a href="#" class="Visited ">首页</a>
 			</div>
-			<div class="Nav_list">
-<<<<<<< HEAD
-				<a class="link" href="skillAction.action" target="_blank">技巧</a>
-=======
-				<a class="link" href="skill.html" target="_blank">技巧</a>
->>>>>>> branch 'master' of https://github.com/XYScience/MoreSex.git
+			<div class="Nav_list">  
+				<a class="link" href="skill.html" target="_blank">技巧</a> 
 			</div>
 			<div class="Nav_list">
 				<a class="link" href="health.html" target="_blank">健康</a>
