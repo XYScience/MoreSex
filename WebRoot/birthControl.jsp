@@ -117,35 +117,7 @@
 		<!--首页幻灯片 开始-->
 		<div class="slide clearfix">
 			<div class="slider">
-				<!-- 
-		<div class="slider-item">
-			<img src="images/1.jpg" alt="" /> <img class="thumbnail"
-				src="images/11.jpg" alt="" />
-			<div class="caption" ><a href="" ><s:property value="#f.title"/></a></div>
-		</div> -->
 
-
-
-
-				<!--  <div class="slider-item">
-			<img src="images/2.jpg" alt="" /> <img class="thumbnail"
-				src="images/22.jpg" alt="" />
-			<div class="caption"><a href="" ><s:property value="#f.title"/></a></div>
-		</div>-->
-
-
-				<!--  
-		<div class="slider-item">
-			<img src="images/3.jpg" alt="" /> <img class="thumbnail"
-				src="images/33.jpg" alt="" />
-			<div class="caption"><a href="" ><s:property value="#f.title"/></a></div>
-		</div> -->
-
-				<!-- <div class="slider-item">
-			<img src="images/4.jpg" alt="" /> <img class="thumbnail"
-				src="images/44.jpg" alt="" />
-			<div class="caption">简介</div>
-		</div> -->
 				<s:iterator value="infoList" var="f">
 					<div class="slider-item">
 						<img src="images/5.jpg" alt="" /> <img class="thumbnail"
@@ -177,9 +149,7 @@
 		</div>
 
 
-		<br>
-		<br>
-		<br>
+		<br> <br> <br>
 
 
 
@@ -190,9 +160,8 @@
 						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
 							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
 							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
-						target="_blank"><img src="images/bed.png" height="140"
-						alt="<s:property value="#f.title"/>" />
-					</a>
+						target="_blank"><img src="images/bir_bg.png" height="140"
+						alt="<s:property value="#f.title"/>" /> </a>
 				</div>
 				<div class="news_title">
 					<h4>
@@ -201,8 +170,7 @@
 							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
 							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
 							target="_blank" title="<s:property value="#f.title"/>"><s:property
-								value="#f.title" />
-						</a>
+								value="#f.title" /> </a>
 					</h4>
 				</div>
 				<div class="count">
@@ -215,8 +183,7 @@
 						有一天，在性医学门诊，医生接诊一位50岁男子，说自己患ED(即勃起功能障碍)有...</p>
 				</div>
 				<br> <span class=""><s:date name="#f.time"
-						format="yyyy-MM-dd"></s:date>
-				</span>
+						format="yyyy-MM-dd"></s:date> </span>
 				<hr class="line">
 			</div>
 
@@ -225,106 +192,28 @@
 		<div class="news">
 			<div class="paging">
 				<span> <a
-					href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a>
+					href="skill/page_<s:property value='page>1?page-1:1'/>.html">上一页</a>
 				</span> <span> <a
-					href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
-				</span> <span class="paging2"><a
-					href="skillAction.action?page=<s:property value='page=1'/>"> 首页</a>
-				</span>
+					href="skill/page_<s:property value='page+1'/>.html">下一页</a> </span> <span
+					class="paging2"><a
+					href="skill/page_<s:property value='page=1'/>.html"> 首页</a> </span>
 
 				<s:iterator var="p" begin="1" end="5">
-					<span><a
-						href="skillAction.action?page=<s:property value='#p'/>"><s:property
-								value='#p' />
-					</a>
-					</span>
-				</s:iterator>
-
-				<span><a
-					href="skillAction.action?page=<s:property value='page=infoSizeList.size/7'/>">尾页</a>
-				</span> 共<em><s:property value="infoSizeList.size/7" />
-				</em>页 <em><s:property value="infoSizeList.size" />
-				</em>条
-
-			</div>
-
-		</div>
-
-
-		<br> <br> <br>
-
-		<s:iterator value="infoList" var="f">
-			<div class="news">
-				<div class="news_img">
-					<a
-						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"><img
-						src="images/bed.png" height="140"
-						alt="<s:property value="#f.title"/>" /> </a>
-				</div>
-				<div class="news_title">
-					<h4>
-						<a
-							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
-							target="_blank" title="<s:property value="#f.title"/>"><s:property
-								value="#f.title" /> </a>
-					</h4>
-				</div>
-				<div class="count">
-					<img src="images/click_num.png" width="18" height="12" />
-					<s:property value="#f.click" />
-				</div>
-
-
-				<div class="news_content">
-					<p>
-
-						<s:iterator value="#f.articleTexts" id="text" begin="0" end="1">
-							<c:set var="str" value="${text.content }" />
-							<c:choose>
-								<c:when test="${fn:length(str) > 52}">
-									<c:out value="${fn:substring(str, 0, 52)}......" />
-								</c:when>
-								<c:otherwise>
-									<c:out value="${str}" />
-								</c:otherwise>
-							</c:choose>
-						</s:iterator>
-					</p>
-				</div>
-				<br> <span class=""><s:date name="#f.time"
-						format="yyyy-MM-dd"></s:date> </span>
-
-				<hr class="line">
-			</div>
-		</s:iterator>
-
-
-		<div class="news">
-			<div class="paging">
-				<span id="getNews_last" onmouseover="toGreen()" onmouseout="toRed()">
-					<a
-					href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a>
-				</span> <span id="getNews_last1" onmouseover="toGreen1()"
-					onmouseout="toRed1()"> <a
-					href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
-				</span> <span class="paging2"><a
-					href="skillAction.action?page=<s:property value='page=1'/>"> 首页</a>
-				</span>
-
-				<s:iterator var="p" begin="1" end="5">
-					<span><a
-						href="skillAction.action?page=<s:property value='#p'/>"><s:property
+					<span><a href="skill/page_<s:property value='#p'/>.html"><s:property
 								value='#p' /> </a> </span>
 				</s:iterator>
 
-				<span id="getNews1" onmouseover="toGreen3()" onmouseout="toRed3()"><a
-					href="skillAction.action?page=<s:property value='page=infoSizeList.size/7'/>">尾页</a>
+				<span><a
+					href="skill/page_<s:property value='page=infoSizeList.size/7'/>.html">尾页</a>
 				</span> 共<em><s:property value="infoSizeList.size/7" /> </em>页 <em><s:property
 						value="infoSizeList.size" /> </em>条
 
 			</div>
+
 		</div>
+
 	</div>
+
 	<!-- 底部 -->
 	<%@ include file="footer.jsp"%>
 </body>

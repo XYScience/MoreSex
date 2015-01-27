@@ -14,19 +14,23 @@
 				<a href="#" class="Visited ">首页</a>
 			</div>
 			<div class="Nav_list">
+<<<<<<< HEAD
 				<a class="link" href="skillAction.action" target="_blank">技巧</a>
+=======
+				<a class="link" href="skill.html" target="_blank">技巧</a>
+>>>>>>> branch 'master' of https://github.com/XYScience/MoreSex.git
 			</div>
 			<div class="Nav_list">
-				<a class="link" href="healthAction.do" target="_blank">健康</a>
+				<a class="link" href="health.html" target="_blank">健康</a>
 			</div>
 			<div class="Nav_list">
-				<a class="link" href="physiologyAction.do" target="_blank">生理</a>
+				<a class="link" href="physiology.html" target="_blank">生理</a>
 			</div>
 			<div class="Nav_list">
-				<a class="link" href="mentalityAction.do" target="_blank">心理</a>
+				<a class="link" href="mentality.html" target="_blank">心理</a>
 			</div>
 			<div class="Nav_list">
-				<a class="link" href="birthControlAction.do" target="_blank">避孕</a>
+				<a class="link" href="birthControl.html" target="_blank">避孕</a>
 			</div>
 		</div>
 		<div class="searchBar">

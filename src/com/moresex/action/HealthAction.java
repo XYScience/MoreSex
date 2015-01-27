@@ -14,25 +14,14 @@ import com.opensymphony.xwork2.ActionSupport;
 @SuppressWarnings("serial")
 public class HealthAction extends ActionSupport implements RequestAware{
 	
-List<ArticleInfo> infoList = new ArrayList<ArticleInfo>();
+   List<ArticleInfo> infoList = new ArrayList<ArticleInfo>();
 	
 	List<ArticleInfo> infoSizeList = new ArrayList<ArticleInfo>();
 	
-	List<ArticleInfo> infoAverageList = new ArrayList<ArticleInfo>();
 	
 	private int page = 1;
 	
 	
-	
-	public List<ArticleInfo> getInfoAverageList() {
-		return infoAverageList;
-	}
-
-
-	public void setInfoAverageList(List<ArticleInfo> infoAverageList) {
-		this.infoAverageList = infoAverageList;
-	}
-
 
 	public List<ArticleInfo> getInfoSizeList() {
 		return infoSizeList;

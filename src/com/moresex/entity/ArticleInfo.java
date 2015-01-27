@@ -20,6 +20,7 @@ public class ArticleInfo implements java.io.Serializable {
 	private String source;
 	private Integer click;
 	private Set articleTexts = new HashSet(0);
+	
 
 	// Constructors
 

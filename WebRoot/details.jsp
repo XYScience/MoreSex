@@ -1,4 +1,5 @@
-<%@page import="com.opensymphony.xwork2.Action"%>
+<%-- <%@page import="com.opensymphony.xwork2.Action"%>
+ --%>
 <%@page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@taglib uri="/struts-tags" prefix="s"%>
 <%
@@ -44,6 +45,7 @@
 
 	<%@ include file="header.jsp"%>
 
+
 	<!-- 主题内容 -->
 	<div class="con">
 
@@ -69,6 +71,7 @@
 				</p>
 				<s:iterator value="contentList" var="con">
 					<p>
+
 						<span><s:property value="#con.content" /> </span>
 					</p>
 				</s:iterator>
@@ -80,46 +83,59 @@
 				<span class="span"></span>
 				<h2>猜你喜欢</h2>
 				<span class="love_a1"> <a rel="nofollow" target="_blank"
-					href="#">干燥</a> <a rel="nofollow" target="_blank" href="#">阴凉</a> </span>
-				<span class="love_a4"> <a rel="nofollow" href="#"
-					title="分享到QQ空间">分享</a> </span> <span class="love_a3"><a
-					rel="nofollow" href="#">不感兴趣</a> </span> <span class="love_a2"><a
-					rel="nofollow" href="#">喜欢</a> </span>
+					href="javaScript:void(0)">干燥</a> <a rel="nofollow" target="_blank"
+					href="#">阴凉</a> </span> <span class="love_a4"> <a rel="nofollow"
+					href="javaScript:void(0)" title="分享到QQ空间">分享</a> </span> <span
+					class="love_a3"><a rel="nofollow" href="javaScript:void(0)">不感兴趣</a>
+				</span> <span class="love_a2"><a rel="nofollow"
+					href="javaScript:void(0)">喜欢</a> </span>
 			</div>
 			<div class="hot_title">
 				<h3>相关文章</h3>
 			</div>
 			<div class="left_bottom_list1">
 				<ul>
-					<li class="list_bottom_list1"><a href="#"> <img
-							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+
+					<li class="list_bottom_list1"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
 					</a>
 					</li>
 
-					<li class="list_bottom_list2"><a href="#"> <img
-							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+
+
+					<li class="list_bottom_list2"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
 					</a>
 					</li>
 
-					<li class="list_bottom_list3"><a href="#"> <img
-							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+
+
+					<li class="list_bottom_list3"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
 					</a>
 					</li>
 
-					<li class="list_bottom_list4"><a href="#"> <img
-							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+
+
+					<li class="list_bottom_list4"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
 					</a>
 					</li>
 
-					<li class="list_bottom_list5"><a href="#"> <img
-							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+
+
+					<li class="list_bottom_list5"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
 					</a>
 					</li>
 
-					<li class="list_bottom_list6"><a href="#"> <img
-							width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+
+
+					<li class="list_bottom_list6"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
 					</a>
 					</li>
+
 
 				</ul>
 			</div>

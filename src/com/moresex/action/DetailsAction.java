@@ -75,8 +75,6 @@ public class DetailsAction extends ActionSupport {
 
 		IDetailsDao detailsDao = new DetailsDaoImpl();
 		contentList = detailsDao.getDetails(articleUrl);
-		// System.out.println("contentList..."+contentList.get(0).getContent());
-
 		return SUCCESS;
 	}
 }
