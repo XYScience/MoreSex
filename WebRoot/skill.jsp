@@ -156,9 +156,11 @@
 
 					<a
 						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
-							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
-							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
-						target="_blank"><img src="images/bed.png" height="140"
+							&articleTitle=<s:property value="#f.title"/>
+							&author=<s:property value="#f.author"/>
+							&source=<s:property value="#f.source"/>
+							&time=<s:property value="#f.time"/>"
+						target="_blank"> <img src="images/bed.png" height="140"
 						alt="<s:property value="#f.title"/>" /> </a>
 
 				</div>
@@ -166,11 +168,13 @@
 					<h4>
 						<a
 							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
-							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
-							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
-							target="_blank" title="<s:property value="#f.title"/>"><s:property
+							&articleTitle=<s:property value="#f.title"/>
+							&author=<s:property value="#f.author"/>
+							&source=<s:property value="#f.source"/>
+							&time=<s:property value="#f.time"/>"
+							target="_blank" title="<s:property value="#f.title"/>"> <s:property
 								value="#f.title" /> </a>
- 					</h4>
+					</h4>
 				</div>
 				<div class="count">
 					<img src="images/click_num.png" width="18" height="12" />

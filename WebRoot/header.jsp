@@ -14,7 +14,7 @@
 				<a href="#" class="Visited ">首页</a>
 			</div>
 			<div class="Nav_list">
-				<a class="link" href="skillAction.do" target="_blank">技巧</a>
+				<a class="link" href="skillAction.action" target="_blank">技巧</a>
 			</div>
 			<div class="Nav_list">
 				<a class="link" href="healthAction.do" target="_blank">健康</a>
