@@ -5,7 +5,7 @@
 <!-- Configuration file for UrlRewriteFilter http://tuckey.org/urlrewrite/ -->
 <urlrewrite>
 
-	
+
 	<rule>
 		<from>/skill.html</from>
 		<to type="forward">/skillAction.do</to>
@@ -15,7 +15,7 @@
 		<from>/index.html</from>
 		<to>/index.action</to>
 	</rule>
-	
+
 	<rule>
 		<from>/health.html</from>
 		<to type="forward">/healthAction.do</to>
@@ -37,11 +37,14 @@
 		<to type="forward">/birthControlAction.do</to>
 	</rule>
 
- <rule>
-   <from>/skill/page_([0-9]+).html</from>
-   <to type="forward">/skillAction.action?page=$1</to>
- </rule>
-
+	<rule>
+		<from>/skill/page_([0-9]+).html</from>
+		<to type="forward">/skillAction.action?page=$1</to>
+	</rule>
+	<outbound-rule>
+		<from>DetailsAction?articleUrl=$1&amp;articleTitle=$2&amp;author=$3&amp;source=$4&amp;time=$5&amp;</from>
+		<to type="forward">/details.jsp</to>
+	</outbound-rule>
 
 </urlrewrite>
 
