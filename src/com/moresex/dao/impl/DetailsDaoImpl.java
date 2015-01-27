@@ -20,7 +20,7 @@ public class DetailsDaoImpl implements IDetailsDao {
 		query.setParameter("articleurl", articleurl);
 //		query.setFirstResult(PAGE);
 		List<ArticleText> list = query.list();
-		System.out.println("list...."+list);
+//		System.out.println("list...."+list);
 		return list;
 		
 	}

@@ -185,10 +185,8 @@
 						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
 							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
 							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
-						target="_blank">
-						<img src="images/bed.png" height="140"
-						alt="<s:property value="#f.title"/>" />
-					</a>
+						target="_blank"> <img src="images/bed.png" height="140"
+						alt="<s:property value="#f.title"/>" /> </a>
 
 				</div>
 				<div class="news_title">
@@ -197,8 +195,7 @@
 							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
 							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
 							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
-							target="_blank" title="<s:property value="#f.title"/>"><s:property
-								value="#f.title" /> </a>
+							target="_blank"> <s:property value="#f.title" /> </a>
 
 
 
@@ -235,23 +232,20 @@
 		<div class="news">
 			<div class="paging">
 				<span id="getNews_last" onmouseover="toGreen()" onmouseout="toRed()">
-					<a
-					href="skillAction.action?page=<s:property value='page>1?page-1:1'/>">上一页</a>
+					<a href="skill/page_<s:property value='page>1?page-1:1'/>.html">上一页</a>
 				</span> <span id="getNews_last1" onmouseover="toGreen1()"
 					onmouseout="toRed1()"> <a
-					href="skillAction.action?page=<s:property value='page+1'/>">下一页</a>
-				</span> <span class="paging2"><a
-					href="skillAction.action?page=<s:property value='page=1'/>"> 首页</a>
-				</span>
+					href="skill/page_<s:property value='page+1'/>.html">下一页</a> </span> <span
+					class="paging2"><a
+					href="skill/page_<s:property value='page=1'/>.html"> 首页</a> </span>
 
 				<s:iterator var="p" begin="1" end="5">
-					<span><a
-						href="skillAction.action?page=<s:property value='#p'/>"><s:property
+					<span><a href="skill/page_<s:property value='#p'/>.html"><s:property
 								value='#p' /> </a> </span>
 				</s:iterator>
 
 				<span id="getNews1" onmouseover="toGreen3()" onmouseout="toRed3()"><a
-					href="skillAction.action?page=<s:property value='page=infoSizeList.size/7'/>">尾页</a>
+					href="skill/page_<s:property value='page=infoSizeList.size/7'/>.html">尾页</a>
 				</span> 共<em><s:property value="infoSizeList.size/7" /> </em>页 <em><s:property
 						value="infoSizeList.size" /> </em>条
 

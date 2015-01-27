@@ -16,15 +16,15 @@
 <base href="<%=basePath%>">
 
 <!-- 	访问article_info表的到文章标题，作者来源 -->
-	<%
-		String author = new String(request.getParameter("author").getBytes(
-				"ISO-8859-1"), "utf-8");
-		String source = new String(request.getParameter("source").getBytes(
-				"ISO-8859-1"), "utf-8");
-		String time = request.getParameter("time");
-		String articleTitle = new String(request.getParameter(
-				"articleTitle").getBytes("ISO-8859-1"), "utf-8");
-	%>
+<%
+	String author = new String(request.getParameter("author").getBytes(
+			"ISO-8859-1"), "utf-8");
+	String source = new String(request.getParameter("source").getBytes(
+			"ISO-8859-1"), "utf-8");
+	String time = request.getParameter("time");
+	String articleTitle = new String(request.getParameter(
+			"articleTitle").getBytes("ISO-8859-1"), "utf-8");
+%>
 
 <title><%=articleTitle%></title>
 <meta http-equiv="pragma" content="no-cache">
@@ -46,7 +46,7 @@
 
 	<%@ include file="header.jsp"%>
 
-	
+
 	<!-- 主题内容 -->
 	<div class="con">
 
@@ -73,9 +73,9 @@
 					<img alt="testimg01" style="width:550px;height:380px,"
 						src="images/testimg02.png">
 				</p>
-				<s:iterator value="contentList" var="con" status="a">
+				<s:iterator value="contentList" var="con">
 					<p>
-						<s:property value="#a.index" />
+
 						<span><s:property value="#con.content" /> </span>
 					</p>
 				</s:iterator>
@@ -89,40 +89,41 @@
 				<span class="span"></span>
 				<h2>猜你喜欢</h2>
 				<span class="love_a1"> <a rel="nofollow" target="_blank"
-					href="#">干燥</a> <a rel="nofollow" target="_blank" href="#">阴凉</a> </span>
-				<span class="love_a4"> <a rel="nofollow" href="#"
-					title="分享到QQ空间">分享</a> </span> <span class="love_a3"><a
-					rel="nofollow" href="#">不感兴趣</a> </span> <span class="love_a2"><a
-					rel="nofollow" href="#">喜欢</a> </span>
+					href="javaScript:void(0)">干燥</a> <a rel="nofollow" target="_blank"
+					href="#">阴凉</a> </span> <span class="love_a4"> <a rel="nofollow"
+					href="javaScript:void(0)" title="分享到QQ空间">分享</a> </span> <span
+					class="love_a3"><a rel="nofollow" href="javaScript:void(0)">不感兴趣</a>
+				</span> <span class="love_a2"><a rel="nofollow"
+					href="javaScript:void(0)">喜欢</a> </span>
 			</div>
 			<div class="hot_title">
 				<h3>相关文章</h3>
 			</div>
 			<div class="left_bottom_list1">
 				<ul>
-					<li class="list_bottom_list1"> <a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+					<li class="list_bottom_list1"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a></li>
 
-					<li class="list_bottom_list2"> <a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+					<li class="list_bottom_list2"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a></li>
 
-					<li class="list_bottom_list3"><a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+					<li class="list_bottom_list3"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a></li>
 
-					<li class="list_bottom_list4"><a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+					<li class="list_bottom_list4"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a></li>
 
-					<li class="list_bottom_list5"><a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+					<li class="list_bottom_list5"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a></li>
 
-					<li class="list_bottom_list6"> <a href="#"> <img
-								width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-						</a> </li>
+					<li class="list_bottom_list6"><a href="javaScript:void(0)">
+							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
+					</a></li>
 
 				</ul>
 			</div>
@@ -133,14 +134,22 @@
 			<div class="hot_links">
 				<h3>热门链接</h3>
 				<ul>
-					<li><a href="javaScript:void(0)">生活</a></li>
-					<li><a href="javaScript:void(0)">感冒</a></li>
-					<li><a href="javaScript:void(0)">发热</a></li>
-					<li><a href="javaScript:void(0)">少白头</a></li>
-					<li><a href="javaScript:void(0)">糖尿病</a></li>
-					<li><a href="javaScript:void(0)">跑步</a></li>
-					<li><a href="javaScript:void(0)">上火</a></li>
-					<li><a href="javaScript:void(0)">瑜伽</a></li>
+					<li><a href="javaScript:void(0)">生活</a>
+					</li>
+					<li><a href="javaScript:void(0)">感冒</a>
+					</li>
+					<li><a href="javaScript:void(0)">发热</a>
+					</li>
+					<li><a href="javaScript:void(0)">少白头</a>
+					</li>
+					<li><a href="javaScript:void(0)">糖尿病</a>
+					</li>
+					<li><a href="javaScript:void(0)">跑步</a>
+					</li>
+					<li><a href="javaScript:void(0)">上火</a>
+					</li>
+					<li><a href="javaScript:void(0)">瑜伽</a>
+					</li>
 				</ul>
 				<div class="clear"></div>
 			</div>
