@@ -161,18 +161,14 @@
 			<div class="news">
 				<div class="news_img">
 					<a
-						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
-							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
-							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
+						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
 						target="_blank"><img src="images/bed.png" height="140"
 						alt="<s:property value="#f.title"/>" /> </a>
 				</div>
 				<div class="news_title">
 					<h4>
 						<a
-							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
-							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
-							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
+							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
 							target="_blank" title="<s:property value="#f.title"/>"><s:property
 								value="#f.title" /> </a>
 					</h4>
@@ -206,8 +202,8 @@
 				<span> <a
 					href="mentality/page_<s:property value='page>1?page-1:1'/>.html">上一页</a>
 				</span> <span> <a
-					href="mentality/page_<s:property value='page+1'/>.html">下一页</a>
-				</span> <span class="paging2"><a
+					href="mentality/page_<s:property value='page+1'/>.html">下一页</a> </span> <span
+					class="paging2"><a
 					href="mentality/page_<s:property value='page=1'/>.html"> 首页</a> </span>
 
 				<s:iterator var="p" begin="1" end="5">

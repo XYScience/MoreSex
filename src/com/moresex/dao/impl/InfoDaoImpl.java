@@ -3,6 +3,8 @@ package com.moresex.dao.impl;
 import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import com.moresex.dao.InfoDao;
 import com.moresex.entity.ArticleInfo;
 import com.moresex.entity.ArticleText;
@@ -14,12 +16,11 @@ public class InfoDaoImpl implements InfoDao {
 	private final int PAGE_SIZE_HOME = 6;
 
 	@Override
-	public List<ArticleInfo> getInfo() {
+	public List<ArticleInfo>  getInfo() {
 		Session session = HibernateSessionFactory.getSession();
-		Query query = session.createQuery("from ArticleInfo f");
-		List<ArticleInfo> list = query.list();
-		// System.out.println(list.size());
-		return list;
+		 Query query = session.createQuery("from ArticleInfo f");
+		 List<ArticleInfo> list = query.list();
+		 return list;
 	}
 
 	@Override
@@ -43,14 +44,15 @@ public class InfoDaoImpl implements InfoDao {
 		return list;
 	}
 
-	@Override 
+	@Override
 	public List<ArticleText> getContent() {
 		Session session = HibernateSessionFactory.getSession();
-		List<ArticleText> list = session.createCriteria(ArticleText.class).list();
-		//System.out.println(list.size());
+		List<ArticleText> list = session.createCriteria(ArticleText.class)
+				.list();
+		// System.out.println(list.size());
 		return list;
 	}
- 
+
 	public List<ArticleInfo> getHomeInfo(int page) {
 		Session session = HibernateSessionFactory.getSession();
 		Query query = session.createQuery("from ArticleInfo f");
@@ -60,6 +62,6 @@ public class InfoDaoImpl implements InfoDao {
 		List<ArticleInfo> list = query.list();
 
 		return list;
-	} 
+	}
 
 }

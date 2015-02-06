@@ -17,16 +17,22 @@
 
 <!-- 	访问article_info表的到文章标题，作者来源 -->
 <%
-	String author = new String(request.getParameter("author").getBytes(
-			"ISO-8859-1"), "utf-8");
-	String source = new String(request.getParameter("source").getBytes(
-			"ISO-8859-1"), "utf-8");
-	String time = request.getParameter("time");
-	String articleTitle = new String(request.getParameter(
-			"articleTitle").getBytes("ISO-8859-1"), "utf-8");
+	//String author = new String(request.getParameter("author").getBytes("ISO-8859-1"),"utf-8");
+	//String source = new String(request.getParameter("source").getBytes("ISO-8859-1"),"utf-8");
+	//String time = new String(request.getParameter("time").getBytes("ISO-8859-1"),"utf-8");
+	//String articleTitle = new String(request.getParameter("articleTitle").getBytes("ISO-8859-1"),"gbk");
+	//String articleTitle = request.getParameter("articleTitle");
+	//System.out.println("----------"+articleTitle);
+	
 %>
 
-<title><%=articleTitle%></title>
+<title>
+	<s:iterator value="contentList" var="con">
+     <s:iterator value="#con.articleInfo" var="c">
+							<s:property value="#c.title" />
+						</s:iterator>
+						</s:iterator>
+						</title>
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
@@ -54,13 +60,24 @@
 
 			<div class="con_left_title">
 				<!--标题 -->
-				<h1>
-					<%=articleTitle%>
-				</h1>
-				<div class="info">
-					<span>作者：<%=author%></span> <span>时间：<%=time%></span> <span>来源：<%=source%></span>
-				</div>
-
+				<s:iterator value="contentList" var="con">
+					<h1>
+						<s:iterator value="#con.articleInfo" var="c">
+							<s:property value="#c.title" />
+						</s:iterator>
+					</h1>
+					<div class="info">
+						<s:iterator value="#con.articleInfo" var="c">
+							<span>作者：<s:property value="#c.author" />
+							</span>
+							<span>时间：<s:date name="#c.time"
+						format="yyyy-MM-dd hh:mm:ss"></s:date> 
+							</span>
+							<span>来源：<s:property value="#c.source" />
+							</span>
+						</s:iterator>
+					</div>
+				</s:iterator>
 			</div>
 
 			<div class="content_text">
@@ -83,11 +100,10 @@
 				<span class="span"></span>
 				<h2>猜你喜欢</h2>
 
-				<span class="love_a1"> <a rel="nofollow" 
-					href="javaScript:void(0)">干燥</a> <a rel="nofollow" 
-
-					href="javaScript:void(0)">阴凉</a> </span> <span class="love_a4"> <a rel="nofollow"
-					href="javaScript:void(0)" title="分享到QQ空间">分享</a> </span> <span
+				<span class="love_a1"> <a rel="nofollow"
+					href="javaScript:void(0)">干燥</a> <a rel="nofollow"
+					href="javaScript:void(0)">阴凉</a> </span> <span class="love_a4"> <a
+					rel="nofollow" href="javaScript:void(0)" title="分享到QQ空间">分享</a> </span> <span
 					class="love_a3"><a rel="nofollow" href="javaScript:void(0)">不感兴趣</a>
 				</span> <span class="love_a2"><a rel="nofollow"
 					href="javaScript:void(0)">喜欢</a> </span>
@@ -100,43 +116,37 @@
 
 					<li class="list_bottom_list1"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a>
-					</li>
+					</a></li>
 
 
 
 					<li class="list_bottom_list2"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a>
-					</li>
+					</a></li>
 
 
 
 					<li class="list_bottom_list3"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a>
-					</li>
+					</a></li>
 
 
 
 					<li class="list_bottom_list4"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a>
-					</li>
+					</a></li>
 
 
 
 					<li class="list_bottom_list5"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a>
-					</li>
+					</a></li>
 
 
 
 					<li class="list_bottom_list6"><a href="javaScript:void(0)">
 							<img width="150" height="112" alt="测试" src="images/testimg02.png"></img>
-					</a>
-					</li>
+					</a></li>
 
 
 				</ul>
@@ -148,14 +158,22 @@
 			<div class="hot_links">
 				<h3>热门链接</h3>
 				<ul>
-					<li><a href="javaScript:void(0)">生活</a></li>
-					<li><a href="javaScript:void(0)">感冒</a></li>
-					<li><a href="javaScript:void(0)">发热</a></li>
-					<li><a href="javaScript:void(0)">少白头</a></li>
-					<li><a href="javaScript:void(0)">糖尿病</a></li>
-					<li><a href="javaScript:void(0)">跑步</a></li>
-					<li><a href="javaScript:void(0)">上火</a></li>
-					<li><a href="javaScript:void(0)">瑜伽</a></li>
+					<li><a href="javaScript:void(0)">生活</a>
+					</li>
+					<li><a href="javaScript:void(0)">感冒</a>
+					</li>
+					<li><a href="javaScript:void(0)">发热</a>
+					</li>
+					<li><a href="javaScript:void(0)">少白头</a>
+					</li>
+					<li><a href="javaScript:void(0)">糖尿病</a>
+					</li>
+					<li><a href="javaScript:void(0)">跑步</a>
+					</li>
+					<li><a href="javaScript:void(0)">上火</a>
+					</li>
+					<li><a href="javaScript:void(0)">瑜伽</a>
+					</li>
 				</ul>
 				<div class="clear"></div>
 			</div>

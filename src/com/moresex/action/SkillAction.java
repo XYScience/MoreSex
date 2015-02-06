@@ -19,9 +19,7 @@ public class SkillAction extends ActionSupport implements RequestAware {
 
 	List<ArticleInfo> infoSizeList = new ArrayList<ArticleInfo>();
 
-
 	private int page = 1;
-
 
 	public List<ArticleInfo> getInfoSizeList() {
 		return infoSizeList;
@@ -51,7 +49,6 @@ public class SkillAction extends ActionSupport implements RequestAware {
 
 		InfoDao dao = new InfoDaoImpl();
 		infoList = dao.getInfo(page);
-		
 
 		infoSizeList = dao.getAllInfo(dao.getInfo().size());
 

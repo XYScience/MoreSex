@@ -40,6 +40,10 @@
 			<result name="success">/details.jsp</result>
 		</action>
 
+		<action name="ShowArticleInfoAction" class="com.moresex.action.ShowArticleInfoAction"
+			method="getTitle">
+			<result name="success">/details.jsp</result>
+		</action>
 	</package>
 
 </struts>    

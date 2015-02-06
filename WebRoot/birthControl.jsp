@@ -157,18 +157,14 @@
 			<div class="news">
 				<div class="news_img">
 					<a
-						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
-							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
-							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
+						href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
 						target="_blank"><img src="images/bir_bg.png" height="140"
 						alt="<s:property value="#f.title"/>" /> </a>
 				</div>
 				<div class="news_title">
 					<h4>
 						<a
-							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>
-							&articleTitle=<s:property value="#f.title"/>&author=<s:property value="#f.author"/>
-							&source=<s:property value="#f.source"/>&time=<s:property value="#f.time"/>"
+							href="DetailsAction?articleUrl=<s:property value="#f.articleUrl"/>"
 							target="_blank" title="<s:property value="#f.title"/>"><s:property
 								value="#f.title" /> </a>
 					</h4>
@@ -202,12 +198,14 @@
 				<span> <a
 					href="birthControl/page_<s:property value='page>1?page-1:1'/>.html">上一页</a>
 				</span> <span> <a
-					href="birthControl/page_<s:property value='page+1'/>.html">下一页</a> </span> <span
-					class="paging2"><a
-					href="birthControl/page_<s:property value='page=1'/>.html"> 首页</a> </span>
+					href="birthControl/page_<s:property value='page+1'/>.html">下一页</a>
+				</span> <span class="paging2"><a
+					href="birthControl/page_<s:property value='page=1'/>.html"> 首页</a>
+				</span>
 
 				<s:iterator var="p" begin="1" end="5">
-					<span><a href="birthControl/page_<s:property value='#p'/>.html"><s:property
+					<span><a
+						href="birthControl/page_<s:property value='#p'/>.html"><s:property
 								value='#p' /> </a> </span>
 				</s:iterator>
 
