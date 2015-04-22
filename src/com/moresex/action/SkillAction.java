@@ -3,39 +3,48 @@ package com.moresex.action;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import org.apache.struts2.interceptor.RequestAware;
-
 import com.moresex.dao.InfoDao;
 import com.moresex.dao.impl.InfoDaoImpl;
-import com.moresex.entity.ArticleInfo;
-import com.moresex.entity.ArticleText;
+import com.moresex.entity.Article;
 import com.opensymphony.xwork2.ActionSupport;
 
 @SuppressWarnings("serial")
 public class SkillAction extends ActionSupport implements RequestAware {
 
-	List<ArticleInfo> infoList = new ArrayList<ArticleInfo>();
+	List<Article> infoList = new ArrayList<Article>();
 
-	List<ArticleInfo> infoSizeList = new ArrayList<ArticleInfo>();
+	List<Article> infoSizeList = new ArrayList<Article>();
+
+	List<Article> infoList2 = new ArrayList<Article>();
 
 	private int page = 1;
-
-	public List<ArticleInfo> getInfoSizeList() {
-		return infoSizeList;
-	}
-
-	public void setInfoSizeList(List<ArticleInfo> infoSizeList) {
-		this.infoSizeList = infoSizeList;
-	}
-
-	public List<ArticleInfo> getInfoList() {
+	
+	public List<Article> getInfoList() {
 		return infoList;
 	}
 
-	public void setInfoList(List<ArticleInfo> infoList) {
+	public void setInfoList(List<Article> infoList) {
 		this.infoList = infoList;
 	}
+
+	
+	public List<Article> getInfoList2() {
+		return infoList2;
+	}
+
+	public void setInfoList2(List<Article> infoList2) {
+		this.infoList2 = infoList2;
+	}
+
+	public List<Article> getInfoSizeList() {
+		return infoSizeList;
+	}
+
+	public void setInfoSizeList(List<Article> infoSizeList) {
+		this.infoSizeList = infoSizeList;
+	}
+
 
 	public int getPage() {
 		return page;
@@ -48,13 +57,14 @@ public class SkillAction extends ActionSupport implements RequestAware {
 	public String getSkill() {
 
 		InfoDao dao = new InfoDaoImpl();
-		infoList = dao.getInfo(page);
-
-		infoSizeList = dao.getAllInfo(dao.getInfo().size());
-
-		int pageCount = infoSizeList.size() % 7 == 0 ? infoSizeList.size() / 7
-				: infoSizeList.size() / 7 + 1;
-		request.put("pageCount", pageCount);
+		infoList = dao.getInfo_skill(page);
+		infoList2 = dao.getHomeInfo2_skill(page);
+		
+//		infoSizeList = dao.getAllInfo(dao.getInfo().size());
+//		
+//		int pageCount = infoSizeList.size() % 7 == 0 ? infoSizeList.size() / 7
+//				: infoSizeList.size() / 7 + 1;
+//		request.put("pageCount", pageCount);
 
 		return SUCCESS;
 	}

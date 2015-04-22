@@ -5,21 +5,33 @@ import java.util.List;
 
 import com.moresex.dao.IDetailsDao;
 import com.moresex.dao.impl.DetailsDaoImpl;
-import com.moresex.entity.ArticleText;
+import com.moresex.entity.Article;
 import com.opensymphony.xwork2.ActionSupport;
 
 @SuppressWarnings("serial")
 public class DetailsAction extends ActionSupport {
 
-	private String articleUrl;
-	private String articleTitle;
+	private String contentId;
+	private String title;
+	private String author;
+	private String source;
+	private String time;
+	private int id;
 
-	public String getArticleTitle() {
-		return articleTitle;
+	public String getContentId() {
+		return contentId;
 	}
 
-	public void setArticleTitle(String articleTitle) {
-		this.articleTitle = articleTitle;
+	public void setContentId(String contentId) {
+		this.contentId = contentId;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public String getAuthor() {
@@ -38,10 +50,6 @@ public class DetailsAction extends ActionSupport {
 		this.source = source;
 	}
 
-	private String author;
-	private String source;
-	private String time;
-
 	public String getTime() {
 		return time;
 	}
@@ -50,22 +58,22 @@ public class DetailsAction extends ActionSupport {
 		this.time = time;
 	}
 
-	private List<ArticleText> contentList = new ArrayList<ArticleText>();
+	public int getId() {
+		return id;
+	}
 
-	public List<ArticleText> getContentList() {
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	private List<Article> contentList = new ArrayList<Article>();
+
+	public List<Article> getContentList() {
 		return contentList;
 	}
 
-	public void setContentList(List<ArticleText> contentList) {
+	public void setContentList(List<Article> contentList) {
 		this.contentList = contentList;
-	}
-
-	public String getArticleUrl() {
-		return articleUrl;
-	}
-
-	public void setArticleUrl(String articleUrl) {
-		this.articleUrl = articleUrl;
 	}
 
 	/**
@@ -74,7 +82,7 @@ public class DetailsAction extends ActionSupport {
 	public String doQ() {
 
 		IDetailsDao detailsDao = new DetailsDaoImpl();
-		contentList = detailsDao.getDetails(articleUrl);
+		contentList = detailsDao.getDetails(contentId, id);
 		return SUCCESS;
 	}
 }

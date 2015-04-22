@@ -6,22 +6,29 @@
 <hibernate-configuration>
 
 	<session-factory>
-		<property name="dialect">
-			org.hibernate.dialect.MySQLDialect
-		</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 
-		<property name="connection.url">jdbc:mysql://118.244.151.176:10001/moresex
-		</property>
-		<property name="connection.username">hua</property>
-		<property name="connection.password">12302014</property>
-		<property name="connection.driver_class">
-			com.mysql.jdbc.Driver
-		</property>
+		<property name="connection.url">jdbc:mysql://123.56.93.109:3306/moresex</property>
+		<property name="connection.username">team</property>
+		<property name="connection.password">ShOoLo2o.com</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
 		<property name="myeclipse.connection.profile">moresex</property>
-		<mapping resource="com/moresex/entity/ArticleInfo.hbm.xml" />
-		<mapping resource="com/moresex/entity/ArticleText.hbm.xml" />
+
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.max_size">10</property>
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.checkoutTimeout">15000</property>
+		<property name="hibernate.c3p0.max_statements">200</property>
+		<property name="hibernate.c3p0.idle_test_period">120</property>
+		<property name="hibernate.c3p0.timeout">300</property>
+		<property name="hibernate.c3p0.acquire_increment">2</property>
+		<property name="hibernate.c3p0.validate">true</property>
+		<property name="hibernate.c3p0.preferredTestQuery">select 1</property>
+		<property name="hibernate.connection.release_mode">after_transaction</property>
+
+		<mapping resource="com/moresex/entity/Article.hbm.xml" />
 
 	</session-factory>
 

@@ -1,0 +1,97 @@
+.indexTopic_main {
+	height: 157px;
+	overflow: hidden;
+}
+
+.indexTopic_main_img {
+	margin-left: 15px;
+	width: 230px;
+	height: 157px;
+	display: inline-block;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	margin-right: 20px;
+}
+
+.indexTopic_main_img img {
+	float: left;
+	padding-top: 5px;
+	padding-right: 20px;
+}
+
+.indexTopic_main h3 {
+	font-size: 20px;
+	display: inline-block;
+	float: left;
+	width: 410px;
+	line-height: 40px;
+}
+
+.indexTopic_main p {
+	display: inline-block;
+	float: left;
+	width: 510px;
+	font-size: 15px;
+	overflow: hidden;
+	color: #7F7F7F;
+	line-height: 25px;
+	display: inline-block;
+}
+
+.label {
+	display: inline-block;
+	float: left;
+	width: 510px;
+	font-size: 15px;
+	padding-top: 15px;
+	height: 20px;
+	color: #B9B9B9;
+}
+
+.indexTopic_main span{
+	color: #2AA53B;
+	padding: 0px 5px;
+}
+
+.indexTopic_list {
+	padding-top: 15px;
+	margin-left: 11px;
+	margin-right: 25px;
+	color: #909090;
+}
+
+.indexTopic_list li {
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	background: url("../images/dian.png") no-repeat 4px 12px;
+	text-align: right;
+	padding-left: 12px;
+	overflow: hidden;
+}
+
+.indexTopic_list_left {
+	display: block;
+	float: left;
+	width: 50px;
+	padding: 0;
+	color: #C1C1C1;
+}
+
+.indexTopic_list_right {
+	display: block;
+	float: left;
+	width: 440px;
+	overflow: hidden;
+}
+
+.indexTopic_list_left a {
+	color: #2AA53B;
+	padding: 0px 5px;
+}
+
+.stat {
+	font-style: normal;
+	visibility: hidden;
+}
